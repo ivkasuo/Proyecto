@@ -27,11 +27,12 @@
         </a>
       </div>
 
-      <div>
-        <button type="button" class="btn btn-dark" id = "boton" data-bs-toggle = "modal" data-bs-target = "#usuario_modal">
+      
+      <!-- <div>
+        <button type="button" class="btn btn-dark">
             Buscar
-        </button>
-      </div>
+          </button>
+      </div> -->
 
     </div>
   </nav>
@@ -56,8 +57,8 @@
     <div class="row">
 
       <!--Perfil César Estrada-->
-      <div class="col d-flex flex-column justify-content-start align-items-center">
-        <img src="/img/foto-cesar.png" class="rounded-circle" style="width: 180px; height: 180px;">
+      <div class="col d-flex flex-column justify-content-start align-items-center" style = "border-style: solid; border-width: 1px; border-radius: 5px; border-color: #E2E2E2;">
+        <img src="/img/foto-cesar.png" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
         <h3 style="margin: 20px; text-align: center;">
           César Estrada
         </h3>
@@ -67,11 +68,14 @@
         <p style="text-align: center;">
           Me encanta contribuir y ser proactivo
         </p>
+        <button type="button" class="btn btn-info" id = "boton" data-bs-toggle = "modal" data-bs-target = "#modalPush">
+            Ver perfil
+        </button>
       </div>
 
       <!--Perfil Eduardo Valdez-->
-      <div class="col d-flex flex-column justify-content-start align-items-center">
-        <img src="img/foto-perfil.png" class="rounded-circle" style="width: 180px; height: 180px;">
+      <div class="col d-flex flex-column justify-content-start align-items-center"  style = "border-style: solid; border-width: 1px; border-radius: 5px; border-color: #E2E2E2;">
+        <img src="img/foto-perfil.png" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
         <h3 style="margin: 20px; text-align: center;">
           Eduardo Valdez
         </h3>
@@ -81,11 +85,14 @@
         <p style="text-align: center;">
           Muy apasionado de la tecnología y siempre con mucho ánimo de aprender algo nuevo
         </p>
+        <button type="button" class="btn btn-info" id = "boton" data-bs-toggle = "modal" data-bs-target = "#modalPush2" style = "margin-bottom: 20px;">
+          Ver perfil
+      </button>
       </div>
 
       <!--Perfil Iván Kasuo-->
-      <div class="col d-flex flex-column justify-content-start align-items-center">
-        <img src="./img/foto_ivan.png" class="rounded-circle" style="width: 180px; height: 180px;">
+      <div class="col d-flex flex-column justify-content-start align-items-center" style = "border-style: solid; border-width: 1px; border-radius: 5px; border-color: #E2E2E2;">
+        <img src="./img/foto_ivan.png" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
         <h3 style="margin: 20px;">
           Iván Kasuo
         </h3>
@@ -98,8 +105,8 @@
       </div>
 
       <!--Perfil Javier Cortés-->
-      <div class="col d-flex flex-column justify-content-start align-items-center">
-        <img src="/img/javier_foto.png" class="rounded-circle" style="width: 180px; height: 180px;">
+      <div class="col d-flex flex-column justify-content-start align-items-center" style = "border-style: solid; border-width: 1px; border-radius: 5px; border-color: #E2E2E2;">
+        <img src="/img/javier_foto.png" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
         <h3 style="margin: 20px;">
           Javier Cortés
         </h3>
@@ -114,8 +121,8 @@
       </div>
 
       <!--Perfil Juan José-->
-      <div class="col d-flex flex-column justify-content-start align-items-center">
-        <img src="/img/foto-juan.jpg" class="rounded-circle" style="width: 180px; height: 180px;">
+      <div class="col d-flex flex-column justify-content-start align-items-center" style = "border-style: solid; border-width: 1px; border-radius: 5px; border-color: #E2E2E2;">
+        <img src="/img/foto-juan.jpg" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
         <h3 style="margin: 20px;">
           Juan José
         </h3>
@@ -128,20 +135,76 @@
       </div>
     </div>
   </div>
-  <div class = "modal" id = "usuario_modal">
-    <div class = "modal-dialog">
-      <div class = "modal-content">
-        <div class = "modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class = "modal-body">
-
-        </div>
-        
-      </div>
-    </div>
-  </div>
+  
   <!--Fin container perfiles-->
+  
+  <!--Inicio de Modales-->
 
+  <!--Modal de César-->
+  <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+
+          <div class="modal-dialog modal-notify modal-info" role="document">
+            
+              <!--contenido perfil-->
+              <div class="modal-content text-center">
+                  <!-- nombre perfil-->
+                  <div class="modal-header d-flex justify-content-center">
+                      <h4 class="heading" style = "margin: 0;">César Adrián Estrada Reséndiz</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <!--contenido perfil-->
+                  <div class="modal-body">
+                      <img src="/img/Foto_César.jpg" style="border-radius: 20px; max-width: 400px; margin-bottom: 20px;">
+
+                      <p>Fomento la colaboración y manejo de cambios en el repositorio. Contribuyo al diseño e implementación de funciones al proyecto.
+                      </p>
+                  </div>
+
+                  <!--botón cerrar perfil -->
+                  <!--<div class="modal-footer flex-center">
+
+                      <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Cerrar</a>
+                  </div>-->
+              </div>            
+          </div>
+      </div>
+
+  <!--Fin de Modal de César-->
+
+  <!--Modal de Eduardo-->
+  <div class="modal fade" id="modalPush2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+
+      <div class="modal-dialog modal-notify modal-info" role="document">
+         
+          <!--contenido perfil-->
+          <div class="modal-content text-center">
+              <!-- nombre perfil-->
+              <div class="modal-header d-flex justify-content-center">
+                <h4 class="heading" style = "margin: 0;">Eduardo Valdez</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <!--contenido perfil-->
+              <div class="modal-body">
+                  <img src="img/foto-perfil.png" class="rounded-circle" style="width: 180px; height: 180px;">
+
+                  <p>Mi rol dentro de este proyecto es gestionarlo, así como encargarme 
+                      de la sección del Front-End y el diseño de prototipos
+                      para generar las vistas.
+                  </p>
+              </div>
+
+              <!--botón cerrar perfil -->
+              <!--<div class="modal-footer flex-center">
+
+                  <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Cerrar</a>
+              </div>-->
+          </div>            
+      </div>
+  </div>
+  <!--Fin de Modal de Eduardo-->
 </body>
 </html>
