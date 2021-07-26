@@ -87,7 +87,7 @@
             <!-- Inicio del perfil de Iván Kasuo-->
             <div class="col d-flex flex-column justify-content-start align-items-center"
                 style="border-style: solid; border-width: 0px; border-radius: 5px; border-color: #E2E2E2;">
-                <img src="./img/foto-ivan.jpg" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
+                <img src="./img/foto_ivan.png" class="rounded-circle" style="width: 180px; height: 180px; margin-top: 20px;">
                 <h3 style="margin: 20px;">
                 Iván Kasuo
                 </h3>
@@ -95,8 +95,12 @@
                 Fullstack Developer
                 </h5>
                 <p style="text-align: center;">
-                *** En busca de conocimiento orientado al futuro ***
+                    "En busca de conocimiento y superar los desafios"
                 </p>
+                <button type="button" class="btn btn-info" id="boton" data-bs-toggle="modal" data-bs-target="#modalPush4"
+                style="margin-bottom: 20px;">
+                Ver perfil
+                </button>
             </div>
              <!-- Fin perfil de Iván Kasuo -->
 
@@ -245,6 +249,38 @@
          <!-- Fin modal-dialog -->
      </div>
      <!--Fin modal de Juanjo-->
+
+      <!-- Inicio modal de Ivan -->
+    <div class="modal fade" id="modalPush4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- Inicio modal-dialog -->
+        <div class="modal-dialog modal-notify modal-info" role="document">
+            <!-- Inicio modal-text-center -->
+            <div class="modal-content text-center">
+                <!-- Inicio cabecera perfil-ivan -->
+                <div class="modal-header d-flex justify-content-center">
+                    <h4 class="heading" style="margin: 0;">Ivan Kasuo Delgado Dolores</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div><!-- Fin cabecera perfil-ivan -->
+                <!-- Inicio contenido biografia-ivan -->
+                <div class="modal-body">
+                    <img src="./img/foto-ivan2.png" class="border-radius: 20px; max-width: 100px; margin-bottom: 20px;">
+                    <p>
+                    <br>
+                    <b>¡Mucho gusto!</b><br> 
+                    <br>Mi función como Desarrollador Web Full Stack es encargarme junto con mi equipo
+                    de manejar cada uno de los aspectos relacionados con la creación y el mantenimiento de
+                    esta Red de Estudio con las herramientas necesarias.
+                    
+                    </p>
+                </div>
+                <!-- Fin contenido biografia-ivan -->
+            </div>
+            <!-- Fin modal-text-center -->
+        </div>
+        <!-- Fin modal-dialog -->
+    </div>
+    <!--Fin modal de Ivan-->
 
 </body>
 </html>}
