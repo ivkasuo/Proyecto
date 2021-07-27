@@ -1,4 +1,5 @@
 const btnEnviar = document.getElementById('btn-enviar');
+
 const validate = (validador) => {
     validador.preventDefault();
     const nombre_usuario = document.getElementById('nombre');
@@ -37,7 +38,6 @@ const validate = (validador) => {
         return false;
     }
 
-
     //validador nombre
     if (!nombre_valido(nombre.value)) {
         alert("Por favor, escribe un nombre válido");
@@ -70,6 +70,23 @@ const validate = (validador) => {
     return true;
 }
 
+function localstorage(){
+    let nombre= document.getElementById("nombre");
+    localStorage.setItem("nombre", nombre.value);
+
+    let apellido= document.getElementById("apellido");
+    localStorage.setItem("apellido", apellido.value);
+
+    let email= document.getElementById("email");
+    localStorage.setItem("email", email.value);
+
+    let telefono= document.getElementById("telefono");
+    localStorage.setItem("telefono", telefono.value);
+
+    let mensaje= document.getElementById("mensaje");
+    localStorage.setItem("mensaje", mensaje.value);
+}
+
 //declaración constantes
 const nombre_valido = nombre => {
     return /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(nombre);
@@ -80,12 +97,10 @@ const apellido_valido = apellido => {
 }
 
 const telefono_valido = telefono => {
-    return /^\d{2}[-]\d{8}$/.test(telefono);
+    return /^\d{2}\d{8}$/.test(telefono);
 }
 
 const correo_valido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
-
-
 btnEnviar.addEventListener('click', validate);

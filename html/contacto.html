@@ -14,7 +14,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
     <!-- Validaciones CSS-->
-    <link rel="stylesheet" href="css/validaciones.css" type="text/css">
+    <link rel="stylesheet" href="../css/validaciones.css" type="text/css">
 </head>
 
 <body>
@@ -50,8 +50,8 @@
             <!-- Campo número telefónico -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="subject">Número telefónico</label>
-                <input type="text" id="telefono" name="telefono" required pattern="[0-9]{2}-[0-9]{8}" required
-                maxlength="11" title="Ejemplo: 55-12362448" placeholder="Ejemplo: 55-12362448"
+                <input type="text" id="telefono" name="telefono" required pattern="[0-9]{2}[0-9]{8}" required
+                maxlength="11" title="Ejemplo: 5512362448" placeholder="Ejemplo: 5512362448"
                 class="form-control" />
             </div>
 
@@ -62,7 +62,7 @@
                 rows="4"></textarea>
             </div>
 
-            <button class="btn btn-primary btn-block mb-6" input type="submit" value="Enviar"
+            <button class="btn btn-primary btn-block mb-6" onclick="localstorage()" input type="submit" value="Enviar"
             id="btn-enviar">Enviar</button>
             <p><p>
             <a href="index.html">Volver a inicio</a>
@@ -70,5 +70,5 @@
     </section>
     <!--Fin formulario-contacto-->
 </body>
-<script src="js/validaciones.js"></script>
+<script src="../js/validaciones.js"></script>
 </html>
