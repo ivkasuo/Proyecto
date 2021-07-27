@@ -1,0 +1,4 @@
+input:valid:required,
+textarea:valid:required {
+    border: 3px solid green;
+}
