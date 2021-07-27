@@ -1,1 +1,1 @@
-# Proyecto javier
+# Proyecto Red Social Educativa
