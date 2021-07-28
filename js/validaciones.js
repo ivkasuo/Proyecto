@@ -67,6 +67,7 @@ const validate = (validador) => {
     } // fin validador correo electrónico
 
     alert("Datos enviados correctamente");
+    document.getElementById("contact-form").reset();
     return true;
 }
 
