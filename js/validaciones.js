@@ -7,47 +7,78 @@ const validate = (validador) => {
     const correo_electronico = document.getElementById('email');
     const num_telefono = document.getElementById('telefono');
     const mensaje = document.getElementById('mensaje');
+    
+
 
     if (nombre.value === "") {
-        alert("Ingresa tu nombre");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ingresa tu nombre!',
+          })
         nombre.focus();
         return false;
     }
 
     if (apellido.value === "") {
-        alert("Ingresa tu apellido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ingresa tu apellido!',
+          })
         apellido.focus();
         return false;
     }
 
     if (email.value === "") {
-        alert("Ingresa tu correo electrónico");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ingresa tu correo!',
+          })
         email.focus();
         return false;
     }
 
     if (telefono.value === "") {
-        alert("Ingresa tu número telefónico");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ingresa tu Telefono!',
+          })
+       
         telefono.focus();
         return false;
     }
 
     if (mensaje.value === "") {
-        alert("Deja un mensaje, por favor!");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ingresa un mensaje!',
+          })
         mensaje.focus();
         return false;
     }
 
     //validador nombre
     if (!nombre_valido(nombre.value)) {
-        alert("Por favor, escribe un nombre válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Por favor, escribe un nombre válido',
+          });
         nombre.focus();
         return false;
     } // fin validador nombre
 
     //validador apellido
     if (!apellido_valido(apellido.value)) {
-        alert("Por favor, escribe un apellido válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Por favor, escribe un apellido válido',
+          });
         apellido.focus();
         return false;
     } // fin validador apellido
@@ -55,19 +86,42 @@ const validate = (validador) => {
 
     //validador correo electrónico
     if (!correo_valido(email.value)) {
-        alert("Por favor, escribe un correo electrónico válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Por favor, escribe un correo electronico válido',
+           });
         email.focus();
         return false;
     } // fin validador correo electrónico
 
      //validador teléfono
      if (!telefono_valido(telefono.value)) {
-        alert("Por favor, escribe un teléfono válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Por favor, escribe un telefono válido',
+          });
         telefono.focus();
         return false;
     } // fin validador teléfono
 
-    alert("Datos enviados correctamente");
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Datos enviados exitosamente'
+      })
     document.getElementById("contact-form").reset();
     return true;
 }
