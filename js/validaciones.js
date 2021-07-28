@@ -90,7 +90,7 @@ const validate = (validador) => {
             icon: 'warning',
             title: 'Oops...',
             text: 'Por favor, escribe un correo electronico válido',
-          });
+           });
         email.focus();
         return false;
     } // fin validador correo electrónico
