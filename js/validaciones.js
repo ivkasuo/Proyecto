@@ -51,13 +51,7 @@ const validate = (validador) => {
         apellido.focus();
         return false;
     } // fin validador apellido
-
-    //validador teléfono
-    if (!telefono_valido(telefono.value)) {
-        alert("Por favor, escribe un teléfono válido");
-        telefono.focus();
-        return false;
-    } // fin validador teléfono
+   
 
     //validador correo electrónico
     if (!correo_valido(email.value)) {
@@ -65,6 +59,13 @@ const validate = (validador) => {
         email.focus();
         return false;
     } // fin validador correo electrónico
+
+     //validador teléfono
+     if (!telefono_valido(telefono.value)) {
+        alert("Por favor, escribe un teléfono válido");
+        telefono.focus();
+        return false;
+    } // fin validador teléfono
 
     alert("Datos enviados correctamente");
     document.getElementById("contact-form").reset();
@@ -97,11 +98,13 @@ const apellido_valido = apellido => {
     return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(apellido);
 }
 
+const correo_valido = email => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 const telefono_valido = telefono => {
     return /^\d{2}\d{8}$/.test(telefono);
 }
 
-const correo_valido = email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+
 btnEnviar.addEventListener('click', validate);
