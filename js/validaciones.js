@@ -7,78 +7,47 @@ const validate = (validador) => {
     const correo_electronico = document.getElementById('email');
     const num_telefono = document.getElementById('telefono');
     const mensaje = document.getElementById('mensaje');
-    
-
 
     if (nombre.value === "") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Ingresa tu nombre!',
-          })
+        alert("Ingresa tu nombre");
         nombre.focus();
         return false;
     }
 
     if (apellido.value === "") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Ingresa tu apellido!',
-          })
+        alert("Ingresa tu apellido");
         apellido.focus();
         return false;
     }
 
     if (email.value === "") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Ingresa tu correo!',
-          })
+        alert("Ingresa tu correo electrónico");
         email.focus();
         return false;
     }
 
     if (telefono.value === "") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Ingresa tu Telefono!',
-          })
-       
+        alert("Ingresa tu número telefónico");
         telefono.focus();
         return false;
     }
 
     if (mensaje.value === "") {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Ingresa un mensaje!',
-          })
+        alert("Deja un mensaje, por favor!");
         mensaje.focus();
         return false;
     }
 
     //validador nombre
     if (!nombre_valido(nombre.value)) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Por favor, escribe un nombre válido',
-          });
+        alert("Por favor, escribe un nombre válido");
         nombre.focus();
         return false;
     } // fin validador nombre
 
     //validador apellido
     if (!apellido_valido(apellido.value)) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Por favor, escribe un apellido válido',
-          });
+        alert("Por favor, escribe un apellido válido");
         apellido.focus();
         return false;
     } // fin validador apellido
@@ -86,43 +55,21 @@ const validate = (validador) => {
 
     //validador correo electrónico
     if (!correo_valido(email.value)) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Por favor, escribe un correo electronico válido',
-           });
+        alert("Por favor, escribe un correo electrónico válido");
         email.focus();
         return false;
     } // fin validador correo electrónico
 
      //validador teléfono
      if (!telefono_valido(telefono.value)) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Oops...',
-            text: 'Por favor, escribe un telefono válido',
-          });
+        alert("Por favor, escribe un teléfono válido");
         telefono.focus();
         return false;
     } // fin validador teléfono
 
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      
-      Toast.fire({
-        icon: 'success',
-        title: 'Datos enviados exitosamente'
-      })
-    document.getElementById("contact-form").reset();
+    alert("Datos enviados correctamente");
+    sendEmail();
+    document.getElementById("contact-form").reset();    
     return true;
 }
 
@@ -143,6 +90,14 @@ function localstorage(){
     localStorage.setItem("mensaje", mensaje.value);
 }
 
+function sendEmail() {
+    let dirEmail = "mailto:soporte@redsocial.com"             
+             + "&subject=" + encodeURIComponent("Contacto usuario red social")
+             + "&body=" + encodeURIComponent(document.getElementById('mensaje').value)
+    ;    
+    window.location.href = dirEmail;
+}
+
 //declaración constantes
 const nombre_valido = nombre => {
     return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(nombre);
@@ -159,6 +114,4 @@ const correo_valido = email => {
 const telefono_valido = telefono => {
     return /^\d{2}\d{8}$/.test(telefono);
 }
-
-
 btnEnviar.addEventListener('click', validate);
