@@ -51,13 +51,7 @@ const validate = (validador) => {
         apellido.focus();
         return false;
     } // fin validador apellido
-
-    //validador teléfono
-    if (!telefono_valido(telefono.value)) {
-        alert("Por favor, escribe un teléfono válido");
-        telefono.focus();
-        return false;
-    } // fin validador teléfono
+   
 
     //validador correo electrónico
     if (!correo_valido(email.value)) {
@@ -66,8 +60,16 @@ const validate = (validador) => {
         return false;
     } // fin validador correo electrónico
 
+     //validador teléfono
+     if (!telefono_valido(telefono.value)) {
+        alert("Por favor, escribe un teléfono válido");
+        telefono.focus();
+        return false;
+    } // fin validador teléfono
+
     alert("Datos enviados correctamente");
-    document.getElementById("contact-form").reset();
+    sendEmail();
+    document.getElementById("contact-form").reset();    
     return true;
 }
 
@@ -88,20 +90,28 @@ function localstorage(){
     localStorage.setItem("mensaje", mensaje.value);
 }
 
+function sendEmail() {
+    let dirEmail = "mailto:soporte@redsocial.com"             
+             + "&subject=" + encodeURIComponent("Contacto usuario red social")
+             + "&body=" + encodeURIComponent(document.getElementById('mensaje').value)
+    ;    
+    window.location.href = dirEmail;
+}
+
 //declaración constantes
 const nombre_valido = nombre => {
-    return /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(nombre);
+    return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(nombre);
 }
 
 const apellido_valido = apellido => {
-    return /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(apellido);
-}
-
-const telefono_valido = telefono => {
-    return /^\d{2}\d{8}$/.test(telefono);
+    return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(apellido);
 }
 
 const correo_valido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+const telefono_valido = telefono => {
+    return /^\d{2}\d{8}$/.test(telefono);
 }
 btnEnviar.addEventListener('click', validate);
