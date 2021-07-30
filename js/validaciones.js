@@ -1,5 +1,6 @@
 const btnEnviar = document.getElementById('btn-enviar');
 
+//Validador campos
 const validate = (validador) => {
     validador.preventDefault();
     const nombre_usuario = document.getElementById('nombre');
@@ -8,68 +9,69 @@ const validate = (validador) => {
     const num_telefono = document.getElementById('telefono');
     const mensaje = document.getElementById('mensaje');
 
-    if (nombre.value === "") {
-        alert("Ingresa tu nombre");
-        nombre.focus();
-        return false;
-    }
-
-    if (apellido.value === "") {
-        alert("Ingresa tu apellido");
-        apellido.focus();
-        return false;
-    }
-
-    if (email.value === "") {
-        alert("Ingresa tu correo electrónico");
-        email.focus();
-        return false;
-    }
-
-    if (telefono.value === "") {
-        alert("Ingresa tu número telefónico");
-        telefono.focus();
-        return false;
-    }
-
-    if (mensaje.value === "") {
-        alert("Deja un mensaje, por favor!");
-        mensaje.focus();
-        return false;
-    }
-
-    //validador nombre
+    //Validador nombre
     if (!nombre_valido(nombre.value)) {
-        alert("Por favor, escribe un nombre válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'MENSAJE',
+            text: 'Por favor, escribe un nombre válido',
+          });
         nombre.focus();
         return false;
-    } // fin validador nombre
+    }//Fin validador nombre
 
-    //validador apellido
+    //Validador apellido
     if (!apellido_valido(apellido.value)) {
-        alert("Por favor, escribe un apellido válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'MENSAJE',
+            text: 'Por favor, escribe un apellido válido',
+          });
         apellido.focus();
         return false;
-    } // fin validador apellido
+    } //Fin validador apellido 
 
-    //validador teléfono
-    if (!telefono_valido(telefono.value)) {
-        alert("Por favor, escribe un teléfono válido");
-        telefono.focus();
-        return false;
-    } // fin validador teléfono
-
-    //validador correo electrónico
+    //Validador correo electrónico
     if (!correo_valido(email.value)) {
-        alert("Por favor, escribe un correo electrónico válido");
+        Swal.fire({
+            icon: 'warning',
+            title: 'MENSAJE',
+            text: 'Por favor, escribe un correo electronico válido',
+           });
         email.focus();
         return false;
-    } // fin validador correo electrónico
+    } //Fin validador correo electrónico
 
-    alert("Datos enviados correctamente");
+     //Validador teléfono
+     if (!telefono_valido(telefono.value)) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'MENSAJE',
+            text: 'Por favor, escribe un telefono válido',
+          });
+        telefono.focus();
+        return false;
+    } //Fin validador teléfono
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })      
+      Toast.fire({
+        icon: 'success',
+        title: 'Datos enviados exitosamente'
+      })
+    sendEmail(); 
     document.getElementById("contact-form").reset();
     return true;
-}
+}//Fin validador campos
 
 function localstorage(){
     let nombre= document.getElementById("nombre");
@@ -88,20 +90,28 @@ function localstorage(){
     localStorage.setItem("mensaje", mensaje.value);
 }
 
-//declaración constantes
+function sendEmail() {
+  let dirEmail = "mailto:soporte@redsocial.com"             
+           + "&subject=" + encodeURIComponent("Contacto usuario red social")
+           + "&body=" + encodeURIComponent(document.getElementById('mensaje').value)
+  ;    
+  window.location.href = dirEmail;
+}
+
+//Declaración constantes para regex
 const nombre_valido = nombre => {
-    return /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(nombre);
+    return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(nombre);
 }
 
 const apellido_valido = apellido => {
-    return /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/.test(apellido);
+    return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(apellido);
+}
+
+const correo_valido = email => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
 }
 
 const telefono_valido = telefono => {
     return /^\d{2}\d{8}$/.test(telefono);
-}
-
-const correo_valido = email => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 btnEnviar.addEventListener('click', validate);
