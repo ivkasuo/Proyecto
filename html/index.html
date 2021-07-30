@@ -6,20 +6,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Inicio | Bienvenido</title>
+    <!--bootstrap.min.css 5.0.2-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--bootstrap.bundle.min.js 5.0.2-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
-    <center>
-    <h1>Red social educativa</h1>
-    <a href="iniciar-sesion.html">Iniciar sesión</a>
-    |||
-    <a href="registrar-usuarios.html">Registrarse</a>
-    </center>
-    <br>
-    <center>
-    <a href="contacto.html">Contáctanos</a>
-    |||
-    <a href="about-us.html">Acerca de nosotros</a>
-    </center>
+    <!--Inicio navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+                    <img src="../img/logotipo-red-social.png" alt="Logotipo" class = "img-fluid" id = "logo">
+                    <a href="index.html" style="text-decoration: none; color: black;">
+                        <h3>Red Social Educativa</h3>
+                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="container-fluid d-flex justify-content-between">
+                        <ul class = "navbar-nav">                                   
+                            <li class = "nav-item me-3 ms-3">
+                                <a href="about-us.html" class = "nav-link text-nowrap">Acerca de nosotros</a>
+                            </li>
+
+                            <li class = "nav-item me-3 ms-3">
+                                <a href="contacto.html" class = "nav-link">Contáctanos</a>
+                            </li>
+                        </ul>
+                        <div class = "container-fluid d-flex justify-content-end align-items-center">
+                            <button class = "btn btn-dark btn-block" style = "box-shadow: 1px 1px 5px gray;">
+                                <a href="registrar-usuarios.html" style = "text-decoration: none; color: white;"><strong>Regístrate</strong></a>
+                            </button>
+                            <button class = "btn btn-primary btn-xs ms-2" style = "box-shadow: 1px 1px 5px gray;">
+                                <a class = "text-nowrap" href="iniciar-sesion.html" style = "text-decoration: none; color: white;"><strong>Iniciar sesión</strong></a>
+                            </button>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>                 
+        </div>
+    </nav>
+    <!--Fin navbar-->
+
+    <section class="container-fluid">
+        <div class = "container-fluid d-flex justify-content-center align-items-center mt-5 pb-5" id = "welcome_div">   
+            <div class="class-container">
+                <img src="../img/educacion-libre.jpg" class = "img-fluid" alt="Imagen sobre educación" id = "welcome_img">
+            </div>
+            <h1 class = "display-1" id = "welcome_h1"><strong>Educación libre <br>en todo momento<br>y para toda persona</strong></h1>
+        </div>
+    </section>   
+
+    <section class="container" id = "description">
+        <div class="row">
+            <h1 class = "display-5" style = "text-align: center;">
+                Presentamos Red Social Educativa,<br>la mejor plataforma para educación institucional.
+            </h1>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <img src="../img/clases-con-precision.jpg" alt="Imagen sobre educación" class="card-img-top" style = "max-height: 276px;">
+                    <div class="card-body">
+                    <p class="card-text">
+                        Maneja tus clases con máxima precisión
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                <img src="../img/conecta-con-alumnos.jpg" alt="" class="card-img-top" style = "max-height: 276px;">
+                <div class="card-body">
+                <p class="card-text">
+                    Conecta con tus alumnos
+                </p>
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                <img src="../img/desempeño-estudiantes.jpg" alt="" class="card-img-top" style = "max-height: 276px;">
+                <div class="card-body">
+                <p class="card-text">
+                    Da clases, y administra el desempeño de tus estudiantes
+                </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

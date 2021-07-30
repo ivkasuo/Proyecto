@@ -1,0 +1,97 @@
+#logo {
+    max-width: 30px;
+    margin-right: 20px;
+}
+
+#welcome_div {
+    margin-bottom: 40px;
+}
+
+#welcome_h1 {
+    margin-left: 50px;
+}
+
+#welcome_img {
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+#description {
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+   #welcome_h1 {
+    font-size: 10px;
+    margin-left: 20px;
+    } 
+    #welcome_img {
+        max-width: 400px;
+    }
+
+    #welcome_div {
+        margin-bottom: 0px;
+    }
+
+    #description {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #welcome_h1{
+     font-size: 3em;
+     margin-left: 40px;
+ } 
+     #welcome_img {
+         max-width: 400px;
+     }
+ 
+     #welcome_div {
+         margin-bottom: 0px;
+     }
+ 
+     #description {
+         padding-top: 0px;
+     }
+ }
+
+ @media screen and (max-width: 425px) {
+    #welcome_h1 {
+        font-size: 12px;
+        margin-left: 16px;
+     } 
+     #welcome_img {
+         max-width: 150px;
+     }
+ 
+     #welcome_div {
+         margin-bottom: 0px;
+     }
+ 
+     #description {
+         padding-top: 0px;
+     }
+ }
+
+ @media screen and (max-width: 375px) {
+    #logo {
+        margin-right: 5px;
+    }
+    
+    #welcome_h1 {
+        font-size: 12px;
+        margin-left: 16px;
+     } 
+     #welcome_img {
+         max-width: 150px;
+     }
+ 
+     #welcome_div {
+         margin-bottom: 0px;
+     }
+ 
+     #description {
+         padding-top: 0px;
+     }
+ }
