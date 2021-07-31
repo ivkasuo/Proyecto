@@ -1,19 +1,23 @@
+//Definimos unas cuantas variables necesarias
 let postArea = document.getElementById("feed");
 let botonPost = document.getElementById("post_button");
+
+//Función que postea cuando clickeas al botón "Publicar"
 botonPost.addEventListener('click', function() {
-    let nombre = window.prompt("Escribe tu nombre");
-    let post = window.prompt("Escribe tu post");
-    postArea.insertAdjacentHTML('beforeend', `
-        <div class = "card" style = "width: 18rem;">
-            <div class = "card-body">
-                <div class = "card-title">
-                    <strong>${nombre}</strong>
-                </div>
-                <div class = "card-text">
-                    <p>${post}</p>
-                </div>
+    let post = document.getElementById("post_textarea");
+    let nombre = document.getElementById("nombre_input");
+    postArea.insertAdjacentHTML('beforeend', 
+    `<div class = "card mt-2" style = "width: 18rem;">
+        <div class = "card-body">
+            <div class = "card-title">
+                <strong>${nombre.value} dice:</strong>
             </div>
-            
-        </div>
-    `)
+            <hr>
+            <p class = "card-text ms-3">${post.value}</p>
+            <hr>
+            <button class = "btn btn-light">Like</button>
+            <button class = "btn btn-light">Comentar</button>
+        </div> 
+     </div>`
+     )
 })

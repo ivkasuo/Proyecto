@@ -52,8 +52,17 @@
 
     </div><!--Fin class container-fluid d-flex-->
 </nav><!--Fin class navbar-->
-<section id = "feed">
-    <button class = "btn btn-primary" id = "post_button">Publicar</button>
+<section id = "feed" class = "container d-flex flex-column w-25 mt-4">
+    <h3>Escribe aquí tu post</h3>
+    <form action="">
+        <label for = "post_textarea"></label>
+        <textarea name = "post_textarea" id = "post_textarea" cols = "61" rows = "4"></textarea>
+        <label for = "nombre_input"></label>
+        <input type = "text" id = "nombre_input" placeholder = "Escribe tu nombre aquí" class = "mb-2">
+    </form>
+    <div>
+        <button class = "btn btn-primary" id = "post_button">Publicar</button>
+    </div>
 </section>
 <script type = "text/javascript" src = "../js/posts.js"></script>
 <!--bootstrap.min.css 5.0.2-->
