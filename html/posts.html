@@ -54,16 +54,16 @@
 </nav><!--Fin class navbar-->
 <section id = "feed" class = "container d-flex flex-column w-25 mt-4">
     <h3>Escribe aquí tu post</h3>
-    <form action = "" method = "POST">
+    <form action = "#" method = "GET" id = "post_form">
         <label for = "post_textarea"></label>
-        <textarea class = "form-control" name = "post_textarea" id = "post_textarea" cols = "61" rows = "4" required></textarea>
+        <textarea class = "form-control needs-validation" name = "post_textarea" id = "post_textarea" cols = "61" rows = "4" required></textarea>
+        <div class = "d-flex mt-2">
+            <label class="form-label" for = "nombre"></label>
+            <input type = "text" id = "nombre" name = "nombre" required pattern = "[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}"
+                    title="Solo se aceptan letras" placeholder = "Escribe tu nombre" class = "form-control me-2 needs-validation" required/>
+            <button type = "submit" class = "btn btn-primary" id = "post_button">Publicar</button>
+        </div>
     </form>
-    <div class = "d-flex mt-2">
-        <label class="form-label" for = "nombre"></label>
-        <input type = "text" id = "nombre" name = "nombre" required pattern = "[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                title="Solo se aceptan letras" placeholder = "Escribe tu nombre" class = "form-control me-2" />
-        <button class = "btn btn-primary" id = "post_button">Publicar</button>
-    </div>
 </section>
 <script type = "text/javascript" src = "../js/posts.js"></script>
 <!--bootstrap.min.css 5.0.2-->
