@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <!--Inicio class navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--Inicio class container-fluid d-flex-->
+    <div class="container-fluid d-flex justify-content-between align-items-center">            
+        <img src="../img/logotipo-red-social.png" alt="Logotipo" class="img-fluid" id="logo">
+        <a href="index.html" style="text-decoration: none; color: black;">
+        <h3>Red Social Educativa</h3>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" id="navbar-button">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Inicio class collapse navbar-collapse-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Inicio class container-fluid d-flex-->
+            <div class="container-fluid d-flex justify-content-between" id="navbar_links">
+                <!--Inicio menú navbar-nav-->
+                <ul class="navbar-nav">
+                <li class="nav-item me-3 ms-3">
+                <a href="about-us.html" class="nav-link text-nowrap">Acerca de nosotros</a>
+                </li>
+
+                <li class="nav-item me-3 ms-3">
+                <a href="contacto.html" class="nav-link">Contáctanos</a>
+                </li>
+                </ul><!--Fin menú navbar-nav-->
+
+                <div class="container-fluid d-flex justify-content-end align-items-center" id="navbar_sesión_buttons">
+                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;">
+                    <a href="registrar-usuarios.html" style="text-decoration: none; color: white;"><strong>Regístrate</strong></a>
+                    </button>
+
+                    <button class="btn btn-primary btn-xs ms-2" style="box-shadow: 1px 1px 5px gray;">
+                    <a class="text-nowrap" href="iniciar-sesion.html" style="text-decoration: none; color: white;"><strong>Iniciar sesión</strong></a>
+                    </button>                    
+                </div><!--Fin class container-fluid d-flex-->
+            </div><!--Fin class container-fluid d-flex-->            
+        </div><!--Fin class collapse navbar-collapse-->
+
+    </div><!--Fin class container-fluid d-flex-->
+</nav><!--Fin class navbar-->
+<div class="container-fluid m-4">
+    <div class="row d-flex justify-content-between">
+        <div class="col-3 d-flex justify-content-center align-items-center" style = "border-style: solid; border-width: 1px; border-color: #C4C4C4; border-radius: 10px;">
+            <section id = "sidebar">
+                <ul id = "list-group" style = "padding: 0; margin: 0;">
+                    <a class = "list-group-item list-group-item-action" style = "width: 20vw;"><h5>Contactos</h5></a>
+                    <a class = "list-group-item list-group-item-action" style = "width: 20vw;"><h5>Grupos</h5></a>
+                    <a class = "list-group-item list-group-item-action" style = "width: 20vw;"><h5>Clases</h5></a>
+                    <a class = "list-group-item list-group-item-action" style = "width: 20vw;"><h5>Configuración</h5></a>
+                </ul>
+            </section>
+        </div>
+        <div class="col-5 d-flex justify-content-center align-items-center" style = "border-style: solid; border-width: 1px; border-color: #C4C4C4; border-radius: 10px;">
+            <section id = "feed" class = "container-fluid d-flex flex-column w-75 mt-4 me-5 ms-5">
+                <h3>Escribe aquí tu post</h3>
+                <form action = "#" method = "GET" id = "post_form">
+                    <label for = "post_textarea"></label>
+                    <textarea class = "form-control needs-validation" name = "post_textarea" id = "post_textarea" cols = "61" rows = "4" required></textarea>
+                    <div class = "d-flex mt-2">
+                        <label class="form-label" for = "nombre"></label>
+                        <input type = "text" id = "nombre" name = "nombre" required pattern = "[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}"
+                                title="Solo se aceptan letras" placeholder = "Escribe tu nombre" class = "form-control me-2 needs-validation" required/>
+                        <button type = "submit" class = "btn btn-primary" id = "post_button">Publicar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="col-3" style = "border-style: solid; border-width: 1px; border-color: #C4C4C4; border-radius: 10px; max-width: 200px;">
+            <section class = "container-fluid d-flex flex-column mt-4">
+                <div>
+                    <div class = "row">
+                        <div class="col-2">
+                            <img src = "../img/foto-cesar.jpg" class = "img-fluid">
+                        </div>
+                        <div class="col-2">
+                            <img src = "../img/foto-cesar.jpg" class = "img-fluid">
+                        </div>
+                        <div class="col-2">
+                            <img src = "../img/foto-cesar.jpg" class = "img-fluid">
+                        </div>
+                        <div class="col-2">
+                            <img src = "../img/foto-cesar.jpg" class = "img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class = "container-fluid"></div>
+        </section>
+        </div>
+    </div>
+</div>
+
+<script type = "text/javascript" src = "../js/posts.js"></script>
+<!--bootstrap.min.css 5.0.2-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!--bootstrap.bundle.min.js 5.0.2-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+</body>
+</html>

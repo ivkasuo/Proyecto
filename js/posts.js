@@ -1,9 +1,9 @@
 //Definimos unas cuantas variables necesarias
-let postArea = document.getElementById("feed");
-let botonPost = document.querySelector("#post_button");
-let post = document.getElementById("post_textarea");
-let nombre = document.getElementById("nombre");
-let form = document.getElementById("post_form");
+const postArea = document.getElementById("feed"),
+      botonPost = document.querySelector("#post_button"),
+      post = document.getElementById("post_textarea"),
+      nombre = document.getElementById("nombre"),
+      form = document.getElementById("post_form");
 
 window.onload = function (){
 	saveInStorage();    
