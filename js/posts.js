@@ -1,29 +1,41 @@
 //Definimos unas cuantas variables necesarias
-let postArea = document.getElementById("feed");
-let botonPost = document.querySelector("#post_button");
-let post = document.getElementById("post_textarea");
-let nombre = document.getElementById("nombre");
-let form = document.getElementById("post_form");
+const postArea = document.getElementById("feed"),
+      botonPost = document.getElementById("post_button"),
+      post = document.getElementById("post_textarea"),
+      nombre = document.getElementById("nombre"),
+      form = document.getElementById("post_form");
 
 window.onload = function (){
 	saveInStorage();    
-	form.addEventListener("submit", (e) => {    
-		if (nombre.value == "" && post.value == "") {
+	botonPost.addEventListener("click", (e) => {    
+		if (nombre.value == "" || post.value == "") {
 			e.preventDefault();
-		} else {
+			/* window.alert("Por favor llena el formulario"); */
+			Swal.fire({
+				icon: 'warning',
+				title: 'ALERTA',
+				text: 'Por favor, verifica haber llenado los campos requeridos',
+			  });
+			nombre.focus();
+			return false;
+		} 		
+		else {
 			postArea.insertAdjacentHTML('beforeend', 
-			`<div class = "card mt-2" style = "max-width: 456px;">
-                <div class = "card-body">
-                    <div class = "card-title">
-                        <strong>${nombre.value} dice:</strong>
-                    </div>
-                    <hr>
-                    <p class = "card-text ms-3">${post.value}</p>
-                    <hr>
-                    <button class = "btn btn-light">Like</button>
-                    <button class = "btn btn-light">Comentar</button>
-                </div> 
-            </div>`
+			`<center>
+			<div class = "card mt-2" style = "width: 18rem;">
+				<div class = "card-body">
+					<div class = "card-title">
+						<strong>${nombre.value} dice:</strong>
+					</div>
+
+					<p class = "card-text ms-3">${post.value}</p>
+
+					<button class = "btn btn-dark btn-block" >Like</button> 
+					<button class = "btn btn-primary" >Comentar</button>					
+				</div> 
+			</div>
+			</center>
+			`
 			)
 		}          
 			let user = {
