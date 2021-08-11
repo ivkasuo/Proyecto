@@ -7,7 +7,7 @@ const postArea = document.getElementById("feed"),
 
 window.onload = function (){
 	saveInStorage();    
-	form.addEventListener("submit", (e) => {    
+	botonPost.addEventListener("click", (e) => {    
 		if (nombre.value == "" && post.value == "") {
 			e.preventDefault();
 		} else {
