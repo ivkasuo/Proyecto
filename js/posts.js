@@ -1,6 +1,6 @@
 //Definimos unas cuantas variables necesarias
 const postArea = document.getElementById("feed"),
-      botonPost = document.querySelector("#post_button"),
+      botonPost = document.getElementById("post_button"),
       post = document.getElementById("post_textarea"),
       nombre = document.getElementById("nombre"),
       form = document.getElementById("post_form");
@@ -8,8 +8,9 @@ const postArea = document.getElementById("feed"),
 window.onload = function (){
 	saveInStorage();    
 	botonPost.addEventListener("click", (e) => {    
-		if (nombre.value == "" && post.value == "") {
+		if (nombre.value == "" || post.value == "") {
 			e.preventDefault();
+			window.alert("Por favor llena el formulario");
 		} else {
 			postArea.insertAdjacentHTML('beforeend', 
 			`<div class = "card mt-2" style = "max-width: 456px;">
