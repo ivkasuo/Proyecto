@@ -10,19 +10,27 @@ window.onload = function (){
 	botonPost.addEventListener("click", (e) => {    
 		if (nombre.value == "" || post.value == "") {
 			e.preventDefault();
-			window.alert("Por favor llena el formulario");
-		} else {
+			/* window.alert("Por favor llena el formulario"); */
+			Swal.fire({
+				icon: 'warning',
+				title: 'ALERTA',
+				text: 'Por favor, verifica haber llenado los campos requeridos',
+			  });
+			nombre.focus();
+			return false;
+		} 		
+		else {
 			postArea.insertAdjacentHTML('beforeend', 
 			`<div class = "card mt-2" style = "max-width: 456px;">
                 <div class = "card-body">
-                    <div class = "card-title">
-                        <strong>${nombre.value} dice:</strong>
+                    <div class = "card-title" style = "background-color: #3059fd; padding: 4px; border-radius: 5px;">
+                        <strong style = "color: white;">${nombre.value} dice:</strong>
                     </div>
                     <hr>
                     <p class = "card-text ms-3">${post.value}</p>
                     <hr>
-                    <button class = "btn btn-light">Like</button>
-                    <button class = "btn btn-light">Comentar</button>
+                    <button class = "btn" style = "background-color: #d5d5d5;">Like</button>
+                    <button class = "btn" style = "background-color: #d5d5d5;">Comentar</button>
                 </div> 
             </div>`
 			)

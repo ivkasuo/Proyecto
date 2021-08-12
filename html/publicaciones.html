@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Bienvenido</title>
-    <!-- Validaciones CSS-->    
+    <title>Publicaciones</title>
+    <!-- Validaciones CSS-->
+    <link rel="stylesheet" href="../css/validaciones.css" type="text/css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
@@ -63,8 +64,8 @@
                     </li>
                     <!-- Fin post césar --> 
 
-                    <!-- Inicio localstorage -->
-                    <li class="nav-item me-3 ms-3">
+                     <!-- Inicio localstorage -->
+                     <li class="nav-item me-3 ms-3">
                         <a href="localstorage.html" class="nav-link text-nowrap">LocalStorage</a>
                     </li>
                     <!-- Fin localstorage --> 
@@ -85,64 +86,44 @@
     </div><!-- Fin class container-fluid d-flex -->
 </nav><!-- Fin class navbar -->
 
-<section class="container-fluid">
-    <div class="container-fluid d-flex justify-content-center align-items-center mt-5 pb-5" id="welcome_div">
-        <div class="class-container">
-            <img src="../img/educacion-libre.jpg" class="img-fluid" alt="Imagen sobre educación" id="welcome_img">
+<!-- Inicio de formulario para hacer publicaciones -->
+<section  id = "feed" class="p-4 d-flex justify-content-center mb-4">
+    <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
+        <h3>Escribe aquí tu post</h3>        
+        <br><br>
+
+        <!-- Inicio campo nombre de usuario -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="nombre">Ingresa tu nombre</label>
+            <input type="text" id="nombre_input" name="nombre_input" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+            title="Solo se aceptan letras" placeholder="Nombre" class="form-control" />
         </div>
-        <h1 class="display-1" id="welcome_h1"><strong>Educación libre <br>en todo momento<br>y para toda persona</strong></h1>
-    </div>
+        <!-- Fin campo nombre de usuario -->
+
+        <!-- Inicio campo caja de comentario -->
+        <!-- NOTA 1: IMPLEMENTAR VALIDACION EN COMENTARIO -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="post_textarea">Escribe un mensaje:</label>
+            <textarea class="form-control" id="post_textarea" name="post_textarea"  required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}"  required 
+            rows="4" placeholder="Deja un comentario..."></textarea>
+        </div>
+         <!-- Fin campo caja de comentario -->
+
+        <!-- Inicio botón -->
+        <button class="btn btn-primary btn-block mb-6" input type="submit" value="Enviar"
+        id="post_button">Enviar</button>
+        <!-- Fin botón -->           
+    </form>
 </section>
-
-<section class="container" id="description">
-    <div class="row">
-        <h1 class="display-5" style="text-align: center;" id="description_h1">
-        Presentamos Red Social Educativa,<br>la mejor plataforma para educación institucional.
-        </h1>
-    </div>
-
-    <div class="row mt-5" id="description-cards-div">
-        <div class="col">
-            <div class="card">
-            <img src="../img/clases-con-precision.jpg" alt="Imagen sobre educación" class="card-img-top"
-            style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Maneja tus clases con máxima precisión
-            </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-            <img src="../img/conecta-con-alumnos.jpg" alt="" class="card-img-top" style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Conecta con tus alumnos
-            </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-            <img src="../img/desempeño-estudiantes.jpg" alt="" class="card-img-top" style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Da clases, y administra el desempeño de tus estudiantes
-            </p>
-            </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
+<!-- Fin de formulario para hacer publicaciones -->
 
 <!--bootstrap.min.css 5.0.2-->
 <link href="../css/bootstrap.min.css" rel="stylesheet" >
 <!--bootstrap.bundle.min.js 5.0.2-->
 <script src="../js/bootstrap.bundle.min.js" type = "text/javascript" ></script>
+<!--scripts de validación-->
+<script src = "../js/validaciones-publicaciones.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
 
 </body>
 </html>
