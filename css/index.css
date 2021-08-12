@@ -48,6 +48,10 @@
    #welcome_h1 {
     font-size: 40px;
     margin-left: 20px;
+    }
+    #logo {
+        max-width: 100px;
+        margin-right: 0px;
     } 
     #welcome_img {
         max-width: 400px;
@@ -102,7 +106,8 @@
 
  @media screen and (max-width: 375px) {
     #logo {
-        margin-right: 5px;
+        max-width: 60px;
+        margin-right: 0px;
     }
 
     #navbar-button {
@@ -123,5 +128,12 @@
  
      #description {
          padding-top: 0px;
+     }
+ }
+
+ @media screen and (max-width: 320px) {
+     #logo {
+         max-width: 40px;
+         margin-right: 0px;
      }
  }

@@ -21,21 +21,18 @@ window.onload = function (){
 		} 		
 		else {
 			postArea.insertAdjacentHTML('beforeend', 
-			`<center>
-			<div class = "card mt-2" style = "width: 18rem;">
-				<div class = "card-body">
-					<div class = "card-title">
-						<strong>${nombre.value} dice:</strong>
-					</div>
-
-					<p class = "card-text ms-3">${post.value}</p>
-
-					<button class = "btn btn-dark btn-block" >Like</button> 
-					<button class = "btn btn-primary" >Comentar</button>					
-				</div> 
-			</div>
-			</center>
-			`
+			`<div class = "card mt-2" style = "max-width: 456px;">
+                <div class = "card-body">
+                    <div class = "card-title" style = "background-color: #3059fd; padding: 4px; border-radius: 5px;">
+                        <strong style = "color: white;">${nombre.value} dice:</strong>
+                    </div>
+                    <hr>
+                    <p class = "card-text ms-3">${post.value}</p>
+                    <hr>
+                    <button class = "btn" style = "background-color: #d5d5d5;">Like</button>
+                    <button class = "btn" style = "background-color: #d5d5d5;">Comentar</button>
+                </div> 
+            </div>`
 			)
 		}          
 			let user = {
