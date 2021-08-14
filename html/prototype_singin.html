@@ -99,7 +99,7 @@
         <br><br>
         </form>
 </section>        
-<div class="container">
+<div class="container w-50 p-4" style = "border-style: solid; border-width: 1px; border-radius: 10px; border-color: #dadada;">
     <div class="row">
         <div class="col-12">
             <form id="needs-validation" novalidate>
@@ -115,7 +115,7 @@
                   <div class="col-md-6 mb-3">
                     <i class="icon-user"></i> <label class="form-label" for="nombre">Ingresa tu Apellido</label>
                      <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                     title="Solo se aceptan letras" class="form-control" value="Ingresa tu Apellido" required>
+                     title="Solo se aceptan letras" class="form-control" placeholder="Ingresa tu Apellido" required>
                      <div class="valid-feedback">
                       Buen Trabajo!
                      </div>
@@ -165,15 +165,17 @@
         </div>
         <!-- Fin campo repite tu contraseña --> 
         <!-- ******* FIN CONTRASEÑA ******* -->     
-   
-        <!-- Inicio botón -->
-        <button class="btn btn-primary btn-block mb-6" onclick="saveInStorage()" input type="submit" value="Enviar"
-        id="btn-enviar">Registrarse</button>
-        <!-- Fin botón --> 
+        <div class="col d-flex flex-column justify-content-center align-items-center">
+          <!-- Inicio botón -->
+          <button class="btn btn-primary mb-6" onclick="saveInStorage()" input type="submit" value="Enviar"
+          id="btn-enviar">Registrarse</button>
+          <!-- Fin botón --> 
 
-        <!-- Inicio botón iniciar sesión -->
-        <a href="iniciar-sesion.html" class="nav-link text-nowrap">¿Ya tienes una cuenta? Iniciar sesión</a>
-        <!-- Fin botón iniciar sesión -->
+          <!-- Inicio botón iniciar sesión -->
+          <a href="iniciar-sesion.html" class="nav-link text-nowrap">¿Ya tienes una cuenta? Iniciar sesión</a>
+          <!-- Fin botón iniciar sesión -->
+        </div>
+        
                 </div>
               </form>
        
