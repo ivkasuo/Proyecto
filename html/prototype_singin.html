@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE DOM</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <!-- Validaciones CSS-->   
+      <link rel="stylesheet" href="../css/validaciones.css" type="text/css"> 
+      <link rel="stylesheet" href="../css/index.css">
+      <link rel="stylesheet" href="../css/fontello.css">
+     
+
+</head>
+<body>
+<!-- Inicio class navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Inicio class container-fluid d-flex -->
+    <div class="container-fluid d-flex justify-content-between align-items-center">            
+        <img src="../img/logotipo-red-social.png" alt="Logotipo" class="img-fluid" id="logo">
+        <a href="index.html" style="text-decoration: none; color: black;">
+        <h3>Red Social Educativa</h3>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" id="navbar-button">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Inicio class collapse navbar-collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Inicio class container-fluid d-flex -->
+            <div class="container-fluid d-flex justify-content-between" id="navbar_links">
+
+                <!-- Inicio menú navbar-nav -->
+                <ul class="navbar-nav">
+                    <!-- Inicio quiénes somos -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="about-us.html" class="nav-link text-nowrap">Acerca de nosotros</a>
+                    </li>
+                    <!-- Fin quiénes somos -->                    
+
+                    <!-- Inicio contáctanos -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="contacto.html" class="nav-link">Contáctanos</a>
+                    </li>
+                    <!-- Fin contáctanos -->  
+
+                    <!-- Inicio publicaciones -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="publicaciones.html" class="nav-link text-nowrap">Publicaciones</a>
+                    </li>
+                    <!-- Fin publicaciones -->  
+
+                    <!-- Inicio página de inicio -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="pagina-inicio.html" class="nav-link text-nowrap">Página inicio</a>
+                    </li>
+                    <!-- Fin página de inicio -->  
+
+                    <!-- Inicio post césar -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="posts.html" class="nav-link text-nowrap">Post 2do proto</a>
+                    </li>
+                    <!-- Fin post césar -->
+                    
+                     <!-- Inicio localstorage -->
+                     <li class="nav-item me-3 ms-3">
+                        <a href="localstorage.html" class="nav-link text-nowrap">LocalStorage</a>
+                    </li>
+                    <!-- Fin localstorage --> 
+                    
+                </ul><!-- Fin menú navbar-nav -->
+
+               
+
+                    <button class="btn btn-primary btn-xs ms-2" style="box-shadow: 1px 1px 5px gray;">
+                    <a class="text-nowrap" href="iniciar-sesion.html" style="text-decoration: none; color: white;"><strong>Iniciar sesión</strong></a>
+                    </button>                    
+                </div><!-- Fin class container-fluid d-flex -->
+            </div><!-- Fin class container-fluid d-flex -->            
+        </div><!-- Fin class collapse navbar-collapse -->
+    </div><!-- Fin class container-fluid d-flex -->
+</nav><!-- Fin class navbar -->
+
+<br>
+<br><br>
+<br>
+<br>
+
+<section class="p-4 d-flex justify-content-center mb-4">
+    <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
+        <h2>Registrarse</h2>
+        Es rápido y fácil
+        <br><br>
+        </form>
+</section>        
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form id="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                   <i class="icon-user"></i> <label class="form-label" for="nombre">Ingresa tu nombre</label>
+                    <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+                    title="Solo se aceptan letras" class="form-control" placeholder="Ingresa tu nombre" required>
+                    <div class="valid-feedback">
+                      Buen Trabajo!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <i class="icon-user"></i> <label class="form-label" for="nombre">Ingresa tu Apellido</label>
+                     <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+                     title="Solo se aceptan letras" class="form-control" value="Ingresa tu Apellido" required>
+                     <div class="valid-feedback">
+                      Buen Trabajo!
+                     </div>
+                   </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <i class="icon-user"></i> <label class="form-label" for="nombre">Ingresa un Nombre de Usuario </label>
+                    <input type="text" class="form-control" id="usuario" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,21}$" required title="Solo se aceptan letras" class="form-control" 
+                    placeholder="Ingresa un usuario" required>
+                    <div class="invalid-feedback">
+                      Por favor elige un nombre de usuario
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <i class="icon-phone-squared"></i><label class="form-label" for="subject">Número telefónico</label>
+                    <input type="text" class="form-control" name="telefono" required pattern="[0-9]{2}[0-9]{8}" required
+                    maxlength="11" title="Ingresa un teléfono válido" placeholder="Ejemplo: 5512362448"
+                    class="form-control">
+                </div>
+                  <div class="col-md-3 mb-3">
+                    <i class="icon-mail"></i><label class="form-label" for="email">Correo electrónico</label>
+                    <input input type="email" id="email" name="email" required
+                    pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){1,}?$"
+                    title="Ingresa una dirección de correo electrónico válida" placeholder="example@correo.com"
+                    class="form-control">
+                    <div class="invalid-feedback">
+                      Ingrese Correo Valido
+                    </div>
+                  </div>
+                     <!-- ******* INICIO CONTRASEÑA ******* -->
+         <!-- Inicio campo contraseña -->
+         <div class="col-md-6 mb-4">
+            <i class="icon-lock"></i><label class="form-label" for="password">Ingresa tu contraseña</label>
+            <input type="password" id="password" name="password" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+            title="Solo se aceptan letras" placeholder="Ingresa tu contraseña" class="form-control" />
+        </div>
+        <!-- Fin campo contraseña -->
+
+         <!-- Inicio campo repite tu contraseña -->
+         <div class="col-md-6 mb-4">
+            <i class="icon-lock"></i><label class="form-label" for="repitePassword">Repite tu contraseña</label>
+            <input type="password" id="repitePassword" name="repitePassword" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+            title="Solo se aceptan letras" placeholder="Repite tu contraseña" class="form-control" />
+            <div class="invalid-feedback">
+                No coincide la contraseña
+              </div>
+        </div>
+        <!-- Fin campo repite tu contraseña --> 
+        <!-- ******* FIN CONTRASEÑA ******* -->     
+   
+        <!-- Inicio botón -->
+        <button class="btn btn-primary btn-block mb-6" onclick="saveInStorage()" input type="submit" value="Enviar"
+        id="btn-enviar">Registrarse</button>
+        <!-- Fin botón --> 
+
+        <!-- Inicio botón iniciar sesión -->
+        <a href="iniciar-sesion.html" class="nav-link text-nowrap">¿Ya tienes una cuenta? Iniciar sesión</a>
+        <!-- Fin botón iniciar sesión -->
+                </div>
+              </form>
+       
+        </div>
+    </div>
+</div>
+
+<!--container-->
+
+<!--bootstrap.min.css 5.0.2-->
+<link href="../css/bootstrap.min.css" rel="stylesheet" >
+<!--bootstrap.bundle.min.js 5.0.2-->
+<script src="../js/bootstrap.bundle.min.js" type = "text/javascript" ></script>
+<!--scripts de validación-->
+<script src="../js/validaciones-registrar-usuarios.js"></script>
+<script src="../js/sweetalert2.all.min.js"></script>
+<!-- <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script> -->
+
+</body>
+</html>
