@@ -10,6 +10,7 @@ const validate = (validador) => {
     const num_telefono = document.getElementById('telefono');
     const input_password = document.getElementById('password');
     const mensaje = document.getElementById('mensaje');
+    let tipoDeUsuario = document.getElementsByName('btnradio');
 
     //Validador nombre
     if (!nombre_valido(nombre.value)) {
@@ -97,11 +98,23 @@ const validate = (validador) => {
       })
 
     document.getElementById("contact-form").reset();
+
+      let user = {
+        nombre: nombre_usuario.value,
+        apellido: apellido_usuario.value,
+        usuario: input_usuario.value,
+        correo_electronico: correo_electronico.value,
+        num_telefono: num_telefono.value,
+        password: input_password.value,
+      }
+
+      appendObjectToLocalStorage(user);
+
     return true;
 }
 //Fin validador campos
 
-function saveInStorage(){
+/*function saveInStorage(){
     let nombre= document.getElementById("nombre");
     localStorage.setItem("nombre", nombre.value);
 
@@ -119,6 +132,18 @@ function saveInStorage(){
 
     let password= document.getElementById("password");
     localStorage.setItem("password", password.value);  
+}*/
+
+function appendObjectToLocalStorage(object){
+  let users = [],
+  dataInLocalStorage = localStorage.getItem('users');
+
+  if (dataInLocalStorage !== null) 
+  {
+  users = JSON.parse(dataInLocalStorage);
+  }
+  users.push(object);
+  localStorage.setItem('users', JSON.stringify(users));
 }
 
 //Declaración constantes para regex
