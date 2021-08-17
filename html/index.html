@@ -17,7 +17,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">            
         <img src="../img/logotipo-red-social.png" alt="Logotipo" class="img-fluid" id="logo">
         <a href="index.html" style="text-decoration: none; color: black;">
-        <h3>Red Social Educativa</h3>
+        <h3 class = "text-nowrap">Red Social Educativa</h3>
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -72,8 +72,8 @@
                 </ul><!-- Fin menú navbar-nav -->
 
                 <div class="container-fluid d-flex justify-content-end align-items-center" id="navbar_sesión_buttons">
-                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;">
-                    <a href="registrar-usuarios.html" style="text-decoration: none; color: white;"><strong>Regístrate</strong></a>
+                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <strong>Regístrate</strong>
                     </button>
 
                     <button class="btn btn-primary btn-xs ms-2" style="box-shadow: 1px 1px 5px gray;">
@@ -138,6 +138,22 @@
         
     </div>
 </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Elige el tipo de usuario a registrar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <a href="../html/prototype_singin_profesor.html" class = "nav-link">Profesor</a>
+            <a href="../html/prototype_singin_alumno.html" class = "nav-link">Alumno</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!--bootstrap.min.css 5.0.2-->
 <link href="../css/bootstrap.min.css" rel="stylesheet" >

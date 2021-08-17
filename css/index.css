@@ -50,7 +50,7 @@
     margin-left: 20px;
     }
     #logo {
-        max-width: 100px;
+        max-width: 40px;
         margin-right: 0px;
     } 
     #welcome_img {
@@ -106,7 +106,7 @@
 
  @media screen and (max-width: 375px) {
     #logo {
-        max-width: 60px;
+        max-width: 30px;
         margin-right: 0px;
     }
 
@@ -133,7 +133,7 @@
 
  @media screen and (max-width: 320px) {
      #logo {
-         max-width: 40px;
+         max-width: 30px;
          margin-right: 0px;
      }
  }
