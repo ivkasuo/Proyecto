@@ -10,7 +10,6 @@ const validate = (validador) => {
     const num_telefono = document.getElementById('telefono');
     const input_password = document.getElementById('password');
     const mensaje = document.getElementById('mensaje');
-    let tipoDeUsuario = document.getElementsByName('btnradio');
 
     //Validador nombre
     if (!nombre_valido(nombre.value)) {
@@ -101,6 +100,7 @@ const validate = (validador) => {
 
       let user = {
         nombre: nombre_usuario.value,
+        userType: "alumno",
         apellido: apellido_usuario.value,
         usuario: input_usuario.value,
         correo_electronico: correo_electronico.value,
@@ -111,10 +111,9 @@ const validate = (validador) => {
       appendObjectToLocalStorage(user);
 
     return true;
+
 }
 //Fin validador campos
-
-
 
 function appendObjectToLocalStorage(object){
   let users = [],
@@ -128,6 +127,7 @@ function appendObjectToLocalStorage(object){
   localStorage.setItem('users', JSON.stringify(users));
 }
 
+
 //Declaración constantes para regex
 const nombre_valido = nombre => {
     return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(nombre);
@@ -140,6 +140,7 @@ const apellido_valido = apellido => {
 const usuario_valido = usuario => {
   return /^[a-zA-Z0-9-_.]+$/u.test(usuario);
 }
+
 
 const correo_valido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
