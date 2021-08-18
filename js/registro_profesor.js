@@ -110,10 +110,26 @@ const validate = (validador) => {
 
     document.getElementById("contact-form").reset();
     return true;
+      let user = {
+        nombre: nombre_usuario.value,
+        apellido: apellido_usuario.value,
+        usuario: input_usuario.value,
+        cedula: cedula_p.value,
+        correo_electronico: correo_electronico.value,
+        num_telefono: num_telefono.value,
+        password: input_password.value,
+      }
+
+      appendObjectToLocalStorage(user);
+
+    return true;
+
+
+
 }
 //Fin validador campos
 
-function saveInStorage(){
+/*function saveInStorage(){
     let nombre= document.getElementById("nombre");
     localStorage.setItem("nombre", nombre.value);
 
@@ -134,7 +150,20 @@ function saveInStorage(){
 
     let cedula= document.getElementById("cedula");
     localStorage.setItem("cedula", cedula.value);
-}
+}*/
+
+function appendObjectToLocalStorage(object){
+    let users = [],
+    dataInLocalStorage = localStorage.getItem('users');
+  
+    if (dataInLocalStorage !== null) 
+    {
+    users = JSON.parse(dataInLocalStorage);
+    }
+    users.push(object);
+    localStorage.setItem('users', JSON.stringify(users));
+  }
+  
 
 //Declaración constantes para regex
 const nombre_valido = nombre => {
