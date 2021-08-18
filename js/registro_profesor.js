@@ -109,6 +109,7 @@ const validate = (validador) => {
       })
 
     document.getElementById("contact-form").reset();
+
       let user = {
         nombre: nombre_usuario.value,
         userType: "profesor",

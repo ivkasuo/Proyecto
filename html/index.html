@@ -72,7 +72,7 @@
                 </ul><!-- Fin menú navbar-nav -->
 
                 <div class="container-fluid d-flex justify-content-end align-items-center" id="navbar_sesión_buttons">
-                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <strong>Regístrate</strong>
                     </button>
 
@@ -139,22 +139,27 @@
     </div>
 </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLabel">Elige el tipo de usuario a registrar</h4>
+          <h5 class="modal-title" id="staticBackdropLabel">Registro</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body d-flex flex-column align-items-center">
-            <a href="../html/prototype_singin_profesor.html" class = "nav-link"><h5>Profesor</h5></a>
-            <a href="../html/prototype_singin_alumno.html" class = "nav-link"><h5>Alumno</h5></a>
+        <div class="modal-body">
+          <p>Registra el tipo de usuario</p>
+        </div>
+        <div class="modal-footer">
+            <i class="icon-user"></i> <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_profesor.html" role="button">Profesor</a>
+            <i class="icon-user"></i>  <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_alumno.html" role="button">Alumno</a>  
         </div>
       </div>
     </div>
   </div>
 
+<!--Css Fontello-->
+<link rel="stylesheet" href="../css/fontello.css">
 <!--bootstrap.min.css 5.0.2-->
 <link href="../css/bootstrap.min.css" rel="stylesheet" >
 <!--bootstrap.bundle.min.js 5.0.2-->
