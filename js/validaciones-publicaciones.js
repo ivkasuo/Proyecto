@@ -2,7 +2,8 @@
 let postArea = document.getElementById("feed");
 let botonPost = document.querySelector("#post_button");
 let post = document.getElementById("post_textarea");
-let nombre = document.getElementById("nombre_input");
+let nombre = document.getElementById("nombre");
+let form = document.getElementById("post_form");
 //Declaración constantes para regex
 const nombre_valido = nombre => {
     return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(nombre);
@@ -11,48 +12,22 @@ const nombre_valido = nombre => {
 const mensaje_valido = mensaje => {
 	return /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u.test(mensaje);
   }
+
 window.onload = function (){
 	saveInStorage();    
-	botonPost.addEventListener('click', function(){    
-		 //Incio de validador nombre de usuario
-		 if (!nombre_valido(nombre.value)) {
+	botonPost.addEventListener("click", (e) => {    
+		if (nombre.value == "" || post.value == "") {
+			e.preventDefault();
+			/* window.alert("Por favor llena el formulario"); */
 			Swal.fire({
 				icon: 'warning',
 				title: 'ALERTA',
-				text: 'Por favor, escribe un nombre de usuario válido',
+				text: 'Por favor, verifica haber llenado los campos requeridos',
 			  });
 			nombre.focus();
 			return false;
-		}//Fin de validador nombre de usuario 
-
-		//Validador mensaje NOTA 2: BUSCAR UN VALIDADOR CORRECTO PARA MENSAJE
-		if (!mensaje_valido(post.value)) {
-			Swal.fire({
-				icon: 'warning',
-				title: 'ALERTA',
-				text: 'Por favor, es necesario escribir un mensaje',
-			  });
-			post.focus();
-			return false;
-		} //Fin validador mensaje
-		
-		const Toast = Swal.mixin({
-			toast: true,
-			position: 'top-end',
-			showConfirmButton: false,
-			timer: 1000,
-			timerProgressBar: true,
-			didOpen: (toast) => {
-			  toast.addEventListener('mouseenter', Swal.stopTimer)
-			  toast.addEventListener('mouseleave', Swal.resumeTimer)
-			}
-		  })      
-		  Toast.fire({
-			icon: 'success',
-			title: 'Datos enviados exitosamente'
-		  })
-		
-
+		} 		
+		else {
 			postArea.insertAdjacentHTML('afterend', 
 			`<center>
 			<div class = "card mt-2" style = "width: 18rem;">
@@ -70,9 +45,7 @@ window.onload = function (){
 			</center>
 			`
 			)
-		
-
-			if (nombre.value.length === 0 || post.value.length === 0 ) return;          
+		}          
 			let user = {
 			nombre: nombre.value,                
 			post: post.value
@@ -84,6 +57,8 @@ window.onload = function (){
 			appendObjectToLocalStorage(user);
 		}
 	)
+
+
 
 	function appendObjectToLocalStorage(object){
 		let users = [],
