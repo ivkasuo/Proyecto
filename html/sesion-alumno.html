@@ -11,94 +11,168 @@
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/sesion-estilos.css" type="text/css"> 
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css"> 
+    <!-- MDB icon -->
+    <link rel="icon" href="../img/logotipo-red-social.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+      <!-- MDB -->
+      <link rel="stylesheet" href="../css/mdb.min.css" />
     <title>Perfil del alumno</title>
 </head>
 
-<body class="bg-gray-100">
-<!-- Inicio class navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!-- Inicio class container-fluid d-flex -->
-        <div class="container-fluid d-flex justify-content-between align-items-center">
+<body>
 
-            <img src="../img/logotipo-red-social.png" alt="Logotipo" class="img-fluid" id="logo">
-            <a href="sesion-alumno.html" style="text-decoration: none; color: black;">
-            <h3>Genbook</h3>
-            </a>
+   <!-- Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid justify-content-between">
+    <!-- Logotipo -->
+    <div class="d-flex">
+   
+      <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+        <img
+          src="../img/logotipo-red-social.png"
+          height="30"
+          alt=""
+          loading="lazy"
+          style="margin-top: 2px;"
+        />
+      </a>
+     <a href="../html/sesion-alumno.html" style="text-decoration: none; color: black;"><h3 style="color: white;">Genbook</h3></a> 
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation" id="navbar-button">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+   
+    </div>
+    <!-- Logotipo -->
 
-            <!-- Inicio class collapse navbar-collapse -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Inicio class container-fluid d-flex -->
-                <div class="container-fluid d-flex justify-content-between" id="navbar_links">
+    <!-- Elementos Centrales -->
+    <ul class="navbar-nav flex-row d-none d-md-flex">
+      <li class="nav-item me-3 me-lg-1 active">
+        
+          <span class="badge rounded-pill badge-notification bg-danger"></span>
+        </a>
+      </li>
 
-                    <!-- Inicio menú navbar-nav -->
-                    <ul class="navbar-nav">              
-                    <!-- Inicio sesión-alumno -->
-                    <li class="nav-item me-3 ms-3">
-                    <a href="sesion-alumno.html" class="nav-link text-nowrap">Inicio</a>
-                    </li>
-                    <!-- Fin sesión-alumno -->
-                    </ul>
-                    <!-- Fin menú navbar-nav -->
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link" href="#">
+          <span><i class="fas fa-flag fa-lg"></i></span>
+        </a>
+      </li>
 
-                    <!-- Inicio menú en cascada -->
-                    <div class="flex flex-row-reverse items-center">
-                        <!-- Inicio botón mi-perfil -->            
-                        <div class="dropdown relative md:static">
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link" href="#">
+          <span><i class="fas fa-video fa-lg"></i></span>
+        </a>
+      </li>
 
-                            <button class="menu-btn focus:outline-none focus:shadow-outline flex flex-wrap items-center">
+     
 
-                            <div class="w-8 h-8 overflow-hidden rounded-full">
-                                <img class="w-full h-full object-cover" src="../img/user.svg" >
-                            </div>                
-                            <!-- Inicio id-usuario -->
-                            <div class="ml-2 capitalize flex ">
-                              <h1 class="text-sm text-gray-800 font-semibold m-0 p-0 leading-none" id="id-usr"></h1>
-                              <i class="fad fa-chevron-down ml-2 text-xs leading-none"></i>
-                            </div>
-                            <!-- Fin id-usuario -->
-                            </button>
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link" href="#">
+          <span><i class="fas fa-users fa-lg"></i></span>
+          <span class="badge rounded-pill badge-notification bg-danger">2</span>
+        </a>
+      </li>
+    </ul>
+    <!-- Fin Elementos Centrales -->
 
-                            <button class="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
+    <!-- Elementos de la Derecha -->
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item me-3 me-lg-1">
+        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+          <img
+            src="https://mdbootstrap.com/img/new/avatars/1.jpg"
+            class="rounded-circle"
+            height="22"
+            alt=""
+            loading="lazy"
+          />
+          <strong class="d-none d-sm-block ms-1" id="id-usr" ></strong>
+        </a>
+      </li>
+    
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a
+          class="nav-link dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-comments fa-lg"></i>
 
-                            <!-- Inicio div menú en cascada -->
-                            <div class="text-gray-500 menu hidden md:mt-10 md:w-full rounded bg-white shadow-md absolute z-20 right-0 w-40 mt-5 py-2 animated faster">
+          <span class="badge rounded-pill badge-notification bg-danger">6</span>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Mensaje de Profe Leon</a>
+          </li>
+        
+        </ul>
+      </li>
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a
+          class="nav-link dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bell fa-lg"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">12</span>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Nueva Tares</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Nueva Publicacion</a>
+          </li>
+         </ul>
+      </li>
+      <li class="nav-item dropdown me-3 me-lg-1">
+        <a
+          class="nav-link dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fas fa-chevron-circle-down fa-lg"></i>
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuLink"
+        >
+          <li>
+            <a class="dropdown-item" href="#">Editar Perfil</a>
+          </li>
+          <li>
+            <a class="dropdown-item" id="btnSalir" href="#">Cerrar Sesion</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Fin de elementos Centrales -->
+  </div>
+</nav>
+<!-- Navbar -->
+    
 
-                                <!-- Inicio editar-perfil -->
-                                <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                                <i class="fad fa-user-edit text-xs mr-1"></i> 
-                                Editar perfil
-                                </a>     
-                                <!-- Fin editar-perfil -->
 
-                                <!-- Inicio configuración-perfil -->
-                                <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
-                                <i class="fad fa-inbox-in text-xs mr-1"></i> 
-                                Configuración
-                                </a>     
-                                <!-- Fin configuración-perfil -->
 
-                                <hr>
-
-                                <!-- Inicio cerrar-sesión-perfil -->
-                                <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="iniciar-sesion.html" id="btnSalir">
-                                <i class="fad fa-user-times text-xs mr-1"></i>
-                                Cerrar sesión
-                                </a>     
-                                <!-- Fin cerrar-sesión-perfil -->
-
-                            </div><!-- Fin div menú en cascada -->
-                        </div><!-- Fin botón mi-perfil -->
-                    </div><!-- Fin menú en cascada -->
-                </div><!-- Fin class container-fluid d-flex -->            
-            </div><!-- Fin class collapse navbar-collapse -->
-        </div><!-- Fin class container-fluid d-flex -->
-    </nav><!-- Fin class navbar -->
 
 <!-- Inicio panel-opciones -->
 <div class="h-screen flex flex-row flex-wrap">
@@ -222,6 +296,8 @@
 <!-- Fin panel-opciones -->
     
 <!-- scripts-->
+  <!-- MDB -->
+<script type="text/javascript" src="../js/mdb.min.js"></script>
 <script src="../js/menu-opt-usuarios.js"></script>
 <!--scripts de validación-->
 <script src = "../js/validaciones-publicaciones.js"></script>
