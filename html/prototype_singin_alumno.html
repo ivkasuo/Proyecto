@@ -8,9 +8,8 @@
     <title>Registro de alumnos</title>
     <!-- Estilos CSS-->      
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+    <!-- Validaciones CSS--> 
     <link rel="stylesheet" href="../css/validaciones.css" type="text/css">    
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/fontello.css" type="text/css">
@@ -69,9 +68,7 @@
 <section class="p-4 d-flex justify-content-center mb-4 mt-5">
     <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
         <h2>Registro Alumnos</h2>
-        <hr>
-        <br><br>
-        </form>
+    </form>
 </section>        
 <div class="container w-50 p-4" style = "border-style: solid; border-width: 1px; border-radius: 10px; border-color: #dadada;">
     <div class="row">
@@ -82,24 +79,24 @@
                   <div class="col-md-6 mb-3">
                    <i class="icon-user"></i> <label class="form-label" for="nombre">Ingresa tu nombre</label>
                     <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                    title="Solo se aceptan letras" class="form-control" placeholder='Ej: "Juan"' required>
+                    title="Solo se aceptan letras" class="form-control" placeholder='Ej: "José"' required>
                     <div class="valid-feedback">
                       Buen Trabajo!
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <i class="icon-user"></i> <label class="form-label" for="apellido">Ingresa tu Apellido</label>
+                    <i class="icon-user"></i> <label class="form-label" for="apellido">Ingresa tu apellido</label>
                      <input type="text" id="apellido" name="apellido" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                     title="Solo se aceptan letras" class="form-control" placeholder='Ej: "Ulloa"' required>
+                     title="Solo se aceptan letras" class="form-control" placeholder='Ej: "López"' required>
                      <div class="valid-feedback">
                       Buen Trabajo!
                      </div>
                    </div>
                 <div class="form-row">
                   <div class="col-md-5 mb-3">
-                    <i class="icon-user"></i> <label class="form-label" for="nombre">Nombre de Usuario </label>
+                    <i class="icon-user"></i> <label class="form-label" for="nombre">Elige un nombre de usuario</label>
                     <input type="text" class="form-control" id="usuario" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{5,21}$" required title="Solo se aceptan letras" class="form-control" 
-                    placeholder='Ej: "LordDestructor"' required>
+                    placeholder='Ej: "JosePrz33"' required>
                     <div class="invalid-feedback">
                       Por favor elige un nombre de usuario
                     </div>
@@ -111,10 +108,10 @@
                     class="form-control">
                   </div>
                   <div class="col-md-4 mb-3">
-                    <i class="icon-mail"></i><label class="form-label" for="email">Email</label>
+                    <i class="icon-mail"></i><label class="form-label" for="email">Correo electrónico</label>
                     <input input type="email" id="email" name="email" required
                     pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){1,}?$"
-                    title="Ingresa una dirección de correo electrónico válida" placeholder="any@correo.com"
+                    title="Ingresa una dirección de correo electrónico válida" placeholder="jose.perez@gmail.com"
                     class="form-control">
                     <div class="invalid-feedback">
                       Ingrese Correo Valido
