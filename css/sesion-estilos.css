@@ -1,0 +1,516 @@
+/*menu para mostrar el menu del perfil*/
+button {
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+}
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box; 
+  border-width: 0; 
+  border-style: solid; 
+  border-color: #e2e8f0; 
+}
+
+
+.bg-gray-100{
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+}
+
+.bg-gray-200{
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+}
+
+.bg-gray-300{
+  --bg-opacity: 1;
+  background-color: #e2e8f0;
+  background-color: rgba(226, 232, 240, var(--bg-opacity));
+}
+/**/
+
+.border-solid{
+  border-style: solid;
+}
+
+.border-dashed{
+  border-style: dashed;
+}
+
+.border-dotted{
+  border-style: dotted;
+}
+
+.border-double{
+  border-style: double;
+}
+
+.border-none{
+  border-style: none;
+}
+
+.border-0{
+  border-width: 0;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-4{
+  border-width: 4px;
+}
+
+.border-8{
+  border-width: 8px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-t-0{
+  border-top-width: 0;
+}
+
+.border-r-0{
+  border-right-width: 0;
+}
+
+.border-b-0{
+  border-bottom-width: 0;
+}
+
+.border-l-0{
+  border-left-width: 0;
+}
+
+.border-t-2{
+  border-top-width: 2px;
+}
+
+.border-r-2{
+  border-right-width: 2px;
+}
+
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-l-2{
+  border-left-width: 2px;
+}
+
+.border-t-4{
+  border-top-width: 4px;
+}
+
+.border-r-4{
+  border-right-width: 4px;
+}
+
+.border-b-4{
+  border-bottom-width: 4px;
+}
+
+.border-l-4{
+  border-left-width: 4px;
+}
+
+.border-t-8{
+  border-top-width: 8px;
+}
+
+.border-r-8{
+  border-right-width: 8px;
+}
+
+.border-b-8{
+  border-bottom-width: 8px;
+}
+
+.border-l-8{
+  border-left-width: 8px;
+}
+
+.border-t{
+  border-top-width: 1px;
+}
+
+.border-r{
+  border-right-width: 1px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-l{
+  border-left-width: 1px;
+}
+
+.box-border{
+  box-sizing: border-box;
+}
+
+.box-content{
+  box-sizing: content-box;
+}
+
+.cursor-auto{
+  cursor: auto;
+}
+
+.cursor-default{
+  cursor: default;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.cursor-wait{
+  cursor: wait;
+}
+
+.cursor-text{
+  cursor: text;
+}
+
+.cursor-move{
+  cursor: move;
+}
+
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
+.block{
+  display: block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.inline{
+  display: inline;
+}
+
+.flex{
+  display: flex;
+}
+
+.inline-flex{
+  display: inline-flex;
+}
+
+.table{
+  display: table;
+}
+
+.table-caption{
+  display: table-caption;
+}
+
+.table-cell{
+  display: table-cell;
+}
+
+.table-column{
+  display: table-column;
+}
+
+.table-column-group{
+  display: table-column-group;
+}
+
+.table-footer-group{
+  display: table-footer-group;
+}
+
+.table-header-group{
+  display: table-header-group;
+}
+
+.table-row-group{
+  display: table-row-group;
+}
+
+.table-row{
+  display: table-row;
+}
+
+.flow-root{
+  display: flow-root;
+}
+/****/
+.grid{
+  display: grid;
+}
+
+.inline-grid{
+  display: inline-grid;
+}
+
+.hidden{
+  display: none;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse{
+  flex-wrap: wrap-reverse;
+}
+
+.flex-no-wrap{
+  flex-wrap: nowrap;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.items-baseline{
+  align-items: baseline;
+}
+
+.items-stretch{
+  align-items: stretch;
+}
+
+.self-auto{
+  align-self: auto;
+}
+
+.self-start{
+  align-self: flex-start;
+}
+
+.self-end{
+  align-self: flex-end;
+}
+
+
+
+/*flez*/
+.flex-1{
+  flex: 1 1 0%;
+}
+
+.flex-auto{
+  flex: 1 1 auto;
+}
+
+/*estilos navbar*/
+.h-0{
+  height: 0;
+}
+
+.h-1{
+  height: 0.25rem;
+}
+
+.h-2{
+  height: 0.5rem;
+}
+
+.h-3{
+  height: 0.75rem;
+}
+
+.h-4{
+  height: 1rem;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
+.h-6{
+  height: 1.5rem;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-10{
+  height: 2.5rem;
+}
+
+.h-12{
+  height: 3rem;
+}
+
+/*estilos navbar*/
+
+
+/*imagen perfil*/
+.h-full{
+  height: 100%;
+}
+
+
+/*texto y boton sesion*/
+.h-screen{
+  height: 100vh;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+}
+
+.text-base{
+  font-size: 1rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+}
+/*texto y boton sesion*/
+
+
+/*Separación nombre perfil inicio sesión*/
+.ml-2{
+  margin-left: 0.5rem;
+}
+/*Separación nombre perfil inicio sesión*/
+
+/*Ancho barra lateral izquierda*/
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+/*Ancho barra lateral izquierda*/
+
+
+/*Menu usuario sesión*/
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.inset-0{
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.inset-auto{
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+
+.inset-y-0{
+  top: 0;
+  bottom: 0;
+}
+
+.inset-x-0{
+  right: 0;
+  left: 0;
+}
+
+.inset-y-auto{
+  top: auto;
+  bottom: auto;
+}
+
+.inset-x-auto{
+  right: auto;
+  left: auto;
+}
+
+.top-0{
+  top: 0;
+}
+
+.right-0{
+  right: 0;
+}
+
+.bottom-0{
+  bottom: 0;
+}
+
+.left-0{
+  left: 0;
+}
+
+.top-auto{
+  top: auto;
+}
+
+/*Menu usuario sesión*/
+
+/*Separación para cards*/
+.gap-6{
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
+/*Separación para cards*/
+
+/*Estilos para cards*/
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+/*Estilos para cards*/

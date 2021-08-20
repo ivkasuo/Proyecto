@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Bienvenido</title>
+    <title>Publicaciones con delete</title>
     <!-- Estilos CSS-->    
     <link rel="stylesheet" href="../css/index.css" type="text/css">
 </head>
@@ -44,20 +43,19 @@
                     <li class="nav-item me-3 ms-3">
                         <a href="contacto.html" class="nav-link">Contáctanos</a>
                     </li>
-                    <!-- Fin contáctanos -->
+                    <!-- Fin contáctanos -->                
 
                     <!-- Inicio post césar -->
                     <li class="nav-item me-3 ms-3">
                         <a href="posts.html" class="nav-link text-nowrap">Publicaciones</a>
                     </li>
-                    <!-- Fin post césar -->                  
+                    <!-- Fin post césar -->
 
-                    <!-- Inicio post delete-lalo -->
-                    <li class="nav-item me-3 ms-3">
+                     <!-- Inicio post delete-lalo -->
+                     <li class="nav-item me-3 ms-3">
                         <a href="publicaciones-delete.html" class="nav-link text-nowrap">Publicaciones delete</a>
                     </li>
                     <!-- Fin post delete-lalo -->
-                    
                     
                 </ul><!-- Fin menú navbar-nav -->
 
@@ -80,86 +78,44 @@
     </div><!-- Fin class container-fluid d-flex -->
 </nav><!-- Fin class navbar -->
 
-<section class="container-fluid">
-    <div class="container-fluid d-flex justify-content-center align-items-center mt-5 pb-5" id="welcome_div">
-        <div class="class-container">
-            <img src="../img/educacion-libre.jpg" class="img-fluid" alt="Imagen sobre educación" id="welcome_img">
+<!-- Inicio de formulario para hacer publicaciones -->
+<section  id = "publications" class="p-4 d-flex justify-content-center mb-4"> 
+    <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
+        <h3>Escribe aquí tu publicación</h3> 
+        <br><br>
+
+        <!-- Inicio campo nombre de usuario -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="usuario">Ingresa tu usuario</label>
+            <input type="text" id="usuario" name="usuario" 
+            title="Solo se aceptan letras" placeholder="Nombre" class="form-control" />
         </div>
-        <h1 class="display-1" id="welcome_h1"><strong>Educación libre <br>en todo momento<br>y para toda persona</strong></h1>
-    </div>
+        <!-- Fin campo nombre de usuario -->
+
+        <!-- Inicio campo caja de comentario -->
+        <!-- NOTA 1: IMPLEMENTAR VALIDACION EN COMENTARIO -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="post">Escribe un mensaje:</label>
+            <textarea class="form-control" id="post" name="post"  
+            rows="4" placeholder="Deja un comentario..."></textarea>
+        </div>
+        <!-- Fin campo caja de comentario -->
+
+        <!-- Inicio botón -->
+        <button class="btn btn-primary btn-block mb-6" input type="submit" value="Enviar"
+        id="btn-add">Enviar</button>
+        <!-- Fin botón --> 
+        <br>
+        <p></p><!-- genera la tabla de posts-->               
+    </form>
 </section>
+<!-- Fin de formulario para hacer publicaciones -->
 
-<section class="container" id="description">
-    <div class="row">
-        <h1 class="display-5" style="text-align: center;" id="description_h1">
-        Presentamos Red Social Educativa,<br>la mejor plataforma para educación institucional.
-        </h1>
-    </div>
-
-    <div class="row mt-5" id="description-cards-div">
-        <div class="col">
-            <div class="card">
-            <img src="../img/clases-con-precision.jpg" alt="Imagen sobre educación" class="card-img-top"
-            style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Maneja tus clases con máxima precisión
-            </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-            <img src="../img/conecta-con-alumnos.jpg" alt="" class="card-img-top" style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Conecta con tus alumnos
-            </p>
-            </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-            <img src="../img/desempeño-estudiantes.jpg" alt="" class="card-img-top" style="max-height: 276px;">
-            <div class="card-body">
-            <p class="card-text">
-            Da clases, y administra el desempeño de tus estudiantes
-            </p>
-            </div>
-            </div>
-        </div>
-        
-    </div>
-</section>
-
-<!-- Inicio de modal para registro de usuarios -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Registro</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Registra el tipo de usuario</p>
-            </div>
-            <div class="modal-footer">
-                <i class="icon-user"></i> <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_profesor.html" role="button">Profesor</a>
-                <i class="icon-user"></i>  <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_alumno.html" role="button">Alumno</a>  
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Fin de modal para registro de usuarios -->
-
-<!--Css Fontello-->
-<link rel="stylesheet" href="../css/fontello.css">
 <!--bootstrap.min.css 5.0.2-->
 <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" >
 <!--bootstrap.bundle.min.js 5.0.2-->
 <script src="../js/bootstrap/bootstrap.bundle.min.js" type = "text/javascript" ></script>
-
+<script src="../js/publicaciones-delete.js" type = "text/javascript" ></script>
 </body>
+
 </html>

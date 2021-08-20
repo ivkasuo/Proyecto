@@ -5,85 +5,158 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos</title>
-    <!--bootstrap.min.css 5.0.2-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!--bootstrap.bundle.min.js 5.0.2-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-    <!-- Validaciones CSS-->
+    <title>Contáctanos</title>    
+    <!-- Estilos CSS-->    
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/validaciones.css" type="text/css">
 </head>
 
 <body>
-     <!--Inicio navbar-->
-     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="container-fluid d-flex justify-content-between">
-            <div class="container-fluid d-flex justify-content-start align-items-center">
-                <img src="../img/logotipo-red-social.png" alt="Logotipo" style="max-width: 60px; padding-right: 24px;">
-                <a href="index.html" style="text-decoration: none; color: black;">
-                <h2>Red Social Educativa</h2>
-                </a>
+<!-- Inicio class navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Inicio class container-fluid d-flex -->
+    <div class="container-fluid d-flex justify-content-between align-items-center">            
+        <img src="../img/logotipo-red-social.png" alt="Logotipo" class="img-fluid" id="logo">
+        <a href="index.html" style="text-decoration: none; color: black;">
+        <h3>Genbook</h3>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation" id="navbar-button">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Inicio class collapse navbar-collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Inicio class container-fluid d-flex -->
+            <div class="container-fluid d-flex justify-content-between" id="navbar_links">
+
+              <!-- Inicio menú navbar-nav -->
+                <ul class="navbar-nav"> 
+
+                     <!-- Inicio quiénes somos -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="about-us.html" class="nav-link text-nowrap">Equipo de desarrollo</a>
+                    </li>
+                    <!-- Fin quiénes somos --> 
+
+                    <!-- Inicio contáctanos -->
+                    <li class="nav-item me-3 ms-3">
+                        <a href="contacto.html" class="nav-link">Contáctanos</a>
+                    </li>
+                    <!-- Fin contáctanos -->
+                    
+                </ul><!-- Fin menú navbar-nav -->
+
+                <div class="container-fluid d-flex justify-content-end align-items-center" id="navbar_sesión_buttons">
+                    <!-- Inicio botón registro de usuarios --->
+                    <button class="btn btn-dark btn-block" style="box-shadow: 1px 1px 5px gray;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <strong>Regístrate</strong>
+                    </button>
+                    <!-- Fin botón registro de usuarios --->
+
+                    <!-- Inicio botón iniciar sesión --->
+                    <button class="btn btn-primary btn-xs ms-2" style="box-shadow: 1px 1px 5px gray;">
+                    <a class="text-nowrap" href="iniciar-sesion.html" style="text-decoration: none; color: white;"><strong>Iniciar sesión</strong></a>
+                    </button>
+                    <!-- Fin botón iniciar sesión --->
+                                       
+                </div><!-- Fin class container-fluid d-flex -->
+            </div><!-- Fin class container-fluid d-flex -->            
+        </div><!-- Fin class collapse navbar-collapse -->
+    </div><!-- Fin class container-fluid d-flex -->
+</nav><!-- Fin class navbar -->
+
+<!-- Inicio formulario-contacto -->
+<section class="p-4 d-flex justify-content-center mb-4">
+    <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
+        <h2>Contáctanos</h2>
+        Déjanos un mensaje y con gusto te atenderemos tan pronto nos sea posible.
+        <br><br>
+        <!-- Inicio campo nombre -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="nombre">Ingresa tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+            title="Solo se aceptan letras" placeholder="Nombre" class="form-control" />
+        </div>
+        <!-- Fin campo nombre -->
+
+        <!-- Inicio campo apellido -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="apellido">Ingresa tu apellido</label>
+            <input type="text" id="apellido" name="apellido" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
+            title="Solo se aceptan letras" placeholder="Apellido" class="form-control" />
+        </div>
+        <!-- Fin campo apellido -->
+
+        <!-- Inicio campo e-mail -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required
+            pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){1,}?$"
+            title="Ingresa una dirección de correo electrónico válida" placeholder="Ejemplo: usuario@mail.com"
+            class="form-control" />
+        </div>
+        <!-- Fin campo e-mail -->
+
+        <!-- Inicio campo número telefónico -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="subject">Número telefónico</label>
+            <input type="text" id="telefono" name="telefono" required pattern="[0-9]{2}[0-9]{8}" required
+            maxlength="11" title="Ingresa un teléfono válido" placeholder="Ejemplo: 5512362448"
+            class="form-control" />
+        </div>
+        <!-- Fin campo número telefónico -->
+
+        <!-- Inicio campo mensaje -->
+        <!-- NOTA 1: IMPLEMENTAR VALIDACION EN COMENTARIO -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="mensaje">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" name="mensaje"  required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}"  required 
+            rows="4" placeholder="Escribe un comentario"></textarea>
+        </div>
+        <!-- Fin campo mensaje -->
+
+        <!-- Inicio botón -->
+        <button class="btn btn-primary btn-block mb-6" onclick="saveInStorage()" input type="submit" value="Enviar"
+        id="btn-enviar">Enviar</button>
+        <!-- Fin botón -->  
+                 
+    </form>
+</section>
+<!-- Fin formulario-contacto -->
+
+<!-- Inicio de modal para registro de usuarios -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Registra el tipo de usuario</p>
+            </div>
+            <div class="modal-footer">
+                <i class="icon-user"></i> <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_profesor.html" role="button">Profesor</a>
+                <i class="icon-user"></i>  <a class="btn btn-primary" data-bs-toggle="modal" href="../html/prototype_singin_alumno.html" role="button">Alumno</a>  
             </div>
         </div>
-    </nav>
-    <!--Fin navbar-->
+    </div>
+</div>
+<!-- Fin de modal para registro de usuarios -->
 
-    <!--Inicio formulario-contacto-->
-    <section class="p-4 d-flex justify-content-center mb-4">
-        <form id="contact-form" class="text-center" style="width: 100%; max-width: 350px">
-            <h2>Contáctanos</h2>
-            Déjanos un mensaje y con gusto te atenderemos tan pronto nos sea posible.
-            <br><br>
-            <!-- Campo nombre -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="nombre">Ingresa tu nombre</label>
-                <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                title="Solo se aceptan letras" placeholder="Nombre" class="form-control" />
-            </div>
-
-            <!-- Campo apellido -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="apellido">Ingresa tu apellido</label>
-                <input type="text" id="apellido" name="apellido" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,30}" required
-                title="Solo se aceptan letras" placeholder="Apellido" class="form-control" />
-            </div>
-
-            <!-- Campo e-mail -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" required
-                pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9]){1,}?$"
-                title="Ingresa una dirección de correo electrónico válida" placeholder="Ejemplo: usuario@mail.com"
-                class="form-control" />
-            </div>
-
-            <!-- Campo número telefónico -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="subject">Número telefónico</label>
-                <input type="text" id="telefono" name="telefono" required pattern="[0-9]{2}[0-9]{8}" required
-                maxlength="11" title="Ingresa un teléfono válido" placeholder="Ejemplo: 5512362448"
-                class="form-control" />
-            </div>
-
-            <!-- Campo mensaje -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="mensaje">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" name="mensaje" required placeholder="Escribe un comentario"
-                rows="4"></textarea>
-            </div>
-
-            <button class="btn btn-primary btn-block mb-6" onclick="localstorage()" input type="submit" value="Enviar"
-            id="btn-enviar">Enviar</button>           
-        </form>
-    </section>
-    <!--Fin formulario-contacto-->
-   
-    <script src="../js/validaciones.js"></script>
-    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<!--Css Fontello-->
+<link rel="stylesheet" href="../css/fontello.css">    
+<!--bootstrap.min.css 5.0.2-->
+<link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" >
+<!--bootstrap.bundle.min.js 5.0.2-->
+<script src="../js/bootstrap/bootstrap.bundle.min.js" type = "text/javascript" ></script>
+<!--scripts de validación-->
+<script src="../js/validaciones-contacto.js"></script>
+<script src="../js/sweetalert/sweetalert2.all.min.js"></script>
+<!-- <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script> -->
   
 </body>
-
 </html>
