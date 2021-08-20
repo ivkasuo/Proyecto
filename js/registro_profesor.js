@@ -11,6 +11,7 @@ const validate = (validador) => {
     const input_password = document.getElementById('password');
     const mensaje = document.getElementById('mensaje');
     const cedula_p = document.getElementById('cedula');
+    const cedulaTipo = document.getElementById("cedula_tipo");
 
     //Validador nombre
     if (!nombre_valido(nombre.value)) {
@@ -116,6 +117,7 @@ const validate = (validador) => {
         apellido: apellido_usuario.value,
         usuario: input_usuario.value,
         cedula: cedula_p.value,
+        cedulaTipo: cedulaTipo.value,
         correo_electronico: correo_electronico.value,
         num_telefono: num_telefono.value,
         password: input_password.value,

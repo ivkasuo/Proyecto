@@ -7,7 +7,9 @@
     <!-- Estilos CSS-->    
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/sesion-estilos.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
+    <script src="https://kit.fontawesome.com/0019cbc38e.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -97,133 +99,142 @@
         </div><!-- Fin class container-fluid d-flex -->
     </nav><!-- Fin class navbar -->
 
-    <!-- Inicio barra lateral -->
-    <div id="sideBar" class="relative flex flex-col flex-wrap bg-white border-r border-gray-300 p-6 flex-none w-64 md:-ml-64 md:fixed md:top-0 md:z-30 md:h-screen md:shadow-xl animated faster">
+    <div class = "container-fluid d-flex flex-row" style = "padding: 0;">
 
-        <!-- Inicio contenido barra lateral -->
-        <div class="flex flex-col">
-
-        <!-- sidebar toggle -->
-        <div class="text-right hidden md:block mb-4">
-            <button id="sideBarHideBtn">
-            <i class="fad fa-times-circle"></i>
-            </button>
+        <!--Sidebar-->
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style = "width: 280px; height: 100vh;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <span class="fs-4 ms-3">Menú</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link link-dark" aria-current = "page">
+                    <i class="fas fa-chalkboard-teacher me-3" style = "width: 16px; height: 16px;"></i>
+                Clases
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link link-dark">
+                    <i class="fas fa-book me-3" style = "width: 16px; height: 16px;"></i>
+                Biblioteca
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link link-dark">
+                    <i class="fas fa-cog me-3" style = "width: 16px; height: 16px;"></i>
+                Configuración de perfil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link link-dark">
+                    <i class="far fa-file-alt me-3" style = "width: 16px; height: 16px;"></i>
+                Evaluaciones
+                </a>
+            </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            </ul>
+            </div>
         </div>
-        <!-- end sidebar toggle -->
 
-        <!-- Inicio títulos barra lateral -->
-        <p class=" text-xs text-gray-600 mb-4 tracking-wider"> <strong>MENÚ</strong></p>      
-        <!-- Fin títulos barra lateral -->
+        <!--Formulario para creación de clase-->
+        <div class="container-fluid d-flex flex-column w-50 align-items-center" id = "form-div">
 
-        <!-- Inicio enlace clases -->
-        <a href="sesion-asignaturas.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-envelope-open-text text-xs mr-2"></i>
-            Mis clases
-        </a>
-        <!-- Fin enlace clases -->
+            <h1 class = "m-5">Asistente para creación de clases</h1>
 
-        <!-- Inicio enlace grupos -->
-        <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-comments text-xs mr-2"></i>
-            Mis grupos
-        </a>
-        <!-- Fin enlace grupos -->
+            <form class = "w-50 border rounded-3 shadow-lg p-3 mb-5 bg-body rounded" id = "clase_form">
 
-        <!-- Inicio enlace biblioteca -->
-        <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-shield-check text-xs mr-2"></i>
-            Biblioteca
-        </a>
-        <!-- Fin enlace biblioteca -->
+                <div class = "m-3">
+                    <label for = "clase_name" class = "form-label">¿Cómo se llamará?</label>
+                    <input type = "text" placeholder = "Nombre de la clase" name = "clase_name" id = "clase_name" class = "form-control">
+                </div>
+                
+                <div class = "m-3">
+                    <label for = "clase_materia" class = "form-label">¿Qué materia se estará impartiendo?</label>
+                    <select name = "clase_materia" id = "clase_materia" class = "form-select">
+                        <option value = "Español">
+                            Español
+                        </option>
+                        <option value = "Matemáticas">
+                            Matemáticas
+                        </option>
+                        <option value = "Biología">
+                            Biología
+                        </option>
+                        <option value = "Historia">
+                            Historia
+                        </option>
+                        <option value = "Geografía">
+                            Geografía
+                        </option>
+                        <option value = "Educación Cívica">
+                            Educación Cívica
+                        </option>
+                        <option value = "Química">
+                            Química
+                        </option>
+                        <option value = "Física">
+                            Física
+                        </option>
+                        <option value = "Inglés">
+                            Inglés
+                        </option>
+                    </select>
+                </div>
 
-        <!-- Inicio enlace sala personal -->
-        <a href="#" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-calendar-edit text-xs mr-2"></i>
-            Sala personal
-        </a>
-        <!-- Fin enlace sala personal -->
+                <div class="m-3">
+
+                    <label for = "">Anota la clave de materia</label>
+                    <input type = "text" class = "form-control" name = "clave_materia" id = "clave_materia">
+
+                </div>
+                
+                <label for = "clase_materia" class = "form-label ms-3">Elige un horario para impartirla</label>
+                <div class = "input-group">
+
+                    <span class="input-group-text ms-3">De:</span>
+                    <input type = "time" name = "clase_hrinicial" id = "clase_hrinicial" class = "form-control">
+
+                    <span class="input-group-text">A:</span>
+                    <input type = "time" name = "clase_hrfinal" id = "clase_hrfinal" class = "form-control me-3">
+
+                </div>
+
+                <div class = "m-3">
+
+                    <label for = "clase_grado" class = "form-label">Elige el grado:</label>
+                    <select class = "form-select" name = "clase_grado" id = "clase_grado">
+                        <option value = "primero">1°</option>
+                        <option value = "segundo">2°</option>
+                        <option value = "tercero">3°</option>
+                    </select>
+                </div>
+
+                <div class="m-3 d-flex flex-row justify-content-center">
+                    <button class = "btn btn-primary" type = "submit">Crear</button>
+                </div>
+                
+            </form>
+
         </div>
-        <!-- Fin contenido barra lateral -->
-    </div>
-    <!-- Fin barra lateral -->
-
-    <!--Formulario para creación de clase-->
-    <div class="container-fluid d-flex flex-column w-50 align-items-center" id = "form-div">
-
-        <h1 class = "m-5">Asistente para creación de clases</h1>
-
-        <form class = "w-50 border rounded-3 shadow-lg p-3 mb-5 bg-body rounded" id = "clase_form">
-
-            <div class = "m-3">
-                <label for = "clase_name" class = "form-label">¿Cómo se llamará?</label>
-                <input type = "text" placeholder = "Nombre de la clase" name = "clase_name" id = "clase_name" class = "form-control">
-            </div>
-            
-            <div class = "m-3">
-                <label for = "clase_materia" class = "form-label">¿Qué materia se estará impartiendo?</label>
-                <select name = "clase_materia" id = "clase_materia" class = "form-select">
-                    <option value = "Español">
-                        Español
-                    </option>
-                    <option value = "Matemáticas">
-                        Matemáticas
-                    </option>
-                    <option value = "Biología">
-                        Biología
-                    </option>
-                    <option value = "Historia">
-                        Historia
-                    </option>
-                    <option value = "Geografía">
-                        Geografía
-                    </option>
-                    <option value = "Educación Cívica">
-                        Educación Cívica
-                    </option>
-                    <option value = "Química">
-                        Química
-                    </option>
-                    <option value = "Física">
-                        Física
-                    </option>
-                    <option value = "Inglés">
-                        Inglés
-                    </option>
-                </select>
-            </div>
-            
-            <label for = "clase_materia" class = "form-label ms-3">Elige un horario para impartirla</label>
-            <div class = "input-group">
-
-                <span class="input-group-text ms-3">De:</span>
-                <input type = "time" name = "clase_hrinicial" id = "clase_hrinicial" class = "form-control">
-
-                <span class="input-group-text">A:</span>
-                <input type = "time" name = "clase_hrfinal" id = "clase_hrfinal" class = "form-control me-3">
-
-            </div>
-
-            <div class = "m-3">
-
-                <label for = "clase_grado" class = "form-label">Elige el grado:</label>
-                <select class = "form-select" name = "clase_grado" id = "clase_grado">
-                    <option value = "primero">1°</option>
-                    <option value = "segundo">2°</option>
-                    <option value = "tercero">3°</option>
-                </select>
-            </div>
-
-            <div class="m-3 d-flex flex-row justify-content-center">
-                <button class = "btn btn-primary" type = "submit">Crear</button>
-            </div>
-            
-        </form>
 
     </div>
+    
 <script src = "../js/crear_clase.js"></script>
 <!--bootstrap.min.css 5.0.2-->
 <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" >
 <!--bootstrap.bundle.min.js 5.0.2-->
 <script src="../js/bootstrap/bootstrap.bundle.min.js" type = "text/javascript" ></script>
+
 </body>
 </html>
