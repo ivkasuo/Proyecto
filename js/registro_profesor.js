@@ -132,28 +132,6 @@ const validate = (validador) => {
 }
 //Fin validador campos
 
-/*function saveInStorage(){
-    let nombre= document.getElementById("nombre");
-    localStorage.setItem("nombre", nombre.value);
-
-    let apellido= document.getElementById("apellido");
-    localStorage.setItem("apellido", apellido.value);
-
-    let usuario= document.getElementById("usuario");
-    localStorage.setItem("usuario", usuario.value);
-
-    let telefono= document.getElementById("telefono");
-    localStorage.setItem("telefono", telefono.value);
-
-    let email= document.getElementById("email");
-    localStorage.setItem("email", email.value);    
-
-    let password= document.getElementById("password");
-    localStorage.setItem("password", password.value);  
-
-    let cedula= document.getElementById("cedula");
-    localStorage.setItem("cedula", cedula.value);
-}*/
 
 function appendObjectToLocalStorage(object){
     let users = [],
