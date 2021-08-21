@@ -120,8 +120,8 @@
       <!-- Fin títulos barra lateral -->
 
       <!-- Inicio enlace clases -->
-      <a href="sesion-asignaturas.html" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-        <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+      <a href="sesion-asignaturas.html"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <i class="fad fa-envelope-open-text text-xs mr-2"></i> 
         Mis clases
       </a>
       <!-- Fin enlace clases -->
@@ -154,12 +154,32 @@
   <!-- Inicio-contenido -->
   <div class="container-fluid">
 
-    <h1 class="display-3 m-5">
+ 
+<!-- Inicio de modal para crear asignaturas -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Alerta</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>¡OOOPS! Parece que todavía no tienes una clase</p>
+          </div>
+          <div class="modal-footer">
+             <a class="btn btn-primary" data-bs-toggle="modal" href="../html/crear_clase.html" role="button">Crear clase</a>              
+        </div>         
+      </div>
+  </div>
+</div>
+<!-- Fin de modal para crear asignaturas -->
+
+  <!--   <h1 class="display-3 m-5">
       !OOOPS¡, Parece que todavía no tienes una clase
     </h1>
     <button class = "btn btn-primary">
         <a href = "../html/crear_clase.html" style = "text-decoration: none; color: white;">Crear clase</a>
-    </button>
+    </button> -->
 
   </div>
   
