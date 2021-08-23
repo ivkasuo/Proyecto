@@ -21,20 +21,20 @@ window.onload = function (){
 		} 		
 		else {
 			postArea.insertAdjacentHTML('beforeend', 
-			`<center>
+			`<div>
 			<div class = "card mt-2" style = "width: 18rem;">
 				<div class = "card-body">
 					<div class = "card-title">
 						<strong>${nombre.value} dice:</strong>
 					</div>
-
+					<hr>
 					<p class = "card-text ms-3">${post.value}</p>
-
-					<button class = "btn btn-dark btn-block" >Like</button> 
-					<button class = "btn btn-primary" >Comentar</button>					
+					<hr>
+					<button class = "btn btn-light" >Like</button> 
+					<button class = "btn btn-light" >Comentar</button>					
 				</div> 
 			</div>
-			</center>
+			</div>
 			`
 			)
 		}          
